@@ -1,86 +1,79 @@
-import { Icon } from '@iconify/react';
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
-import PageHeading from '../PageHeading';
-import SectionHeading from '../SectionHeading';
+// import PageHeading from '../PageHeading';
 import Spacing from '../Spacing';
-import ContactInfoWidget from '../Widget/ContactInfoWidget';
 
-export default function ContactPage() {
-  pageTitle('Contact Us');
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export default function LoginPage() {
+  pageTitle('Login');
+
+  // State for email and password
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleEmailChange = (evt) => {
+    setEmail(evt.target.value);
+  };
+
+  const handlePasswordChange = (evt) => {
+    setPassword(evt.target.value);
+  };
+
+  const handleLogin = (evt) => {
+    evt.preventDefault();
+    // Add your login logic here using 'email' and 'password'
+    alert(`Logging in with email: ${email} and password: ${password}`);
+  };
+
   return (
     <>
-      <PageHeading
-        title="Contact Us"
-        bgSrc="/images/contact_hero_bg.jpeg"
-        pageLinkText="Contact"
-      />
+    
+     
       <Spacing lg="150" md="80" />
-      <Div className="container">
+      <Div className="container d-flex justify-content-center align-items-center">
         <Div className="row">
-          <Div className="col-lg-6">
-            <SectionHeading
-              title="Do you have a project <br/>in your mind?"
-              subtitle="Getting Touch"
+                 
+        <div>
+      <div
+        style={{
+          width: "800px", // Setting the width of the box
+          padding: "50px",
+          backgroundColor: "gray",
+          borderRadius: "10px", // Adding rounded corners
+          boxShadow: "0 0 10px rgba(0, 0, 0, 1)", // Adding a box shadow
+          // textAlign: "center", 
+        }}
+      >
+         <h2>Login</h2>
+        <form>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="Enter email"
             />
-            <Spacing lg="55" md="30" />
-            <ContactInfoWidget withIcon />
-            <Spacing lg="0" md="50" />
-          </Div>
-          <Div className="col-lg-6">
-            <form action="#" className="row">
-              <Div className="col-sm-6">
-                <label className="cs-primary_color">Full Name*</label>
-                <input type="text" className="cs-form_field" />
-                <Spacing lg="20" md="20" />
-              </Div>
-              <Div className="col-sm-6">
-                <label className="cs-primary_color">Email*</label>
-                <input type="text" className="cs-form_field" />
-                <Spacing lg="20" md="20" />
-              </Div>
-              <Div className="col-sm-6">
-                <label className="cs-primary_color">Project Type*</label>
-                <input type="text" className="cs-form_field" />
-                <Spacing lg="20" md="20" />
-              </Div>
-              <Div className="col-sm-6">
-                <label className="cs-primary_color">Mobile*</label>
-                <input type="text" className="cs-form_field" />
-                <Spacing lg="20" md="20" />
-              </Div>
-              <Div className="col-sm-12">
-                <label className="cs-primary_color">Mobile*</label>
-                <textarea
-                  cols="30"
-                  rows="7"
-                  className="cs-form_field"
-                ></textarea>
-                <Spacing lg="25" md="25" />
-              </Div>
-              <Div className="col-sm-12">
-                <button className="cs-btn cs-style1">
-                  <span>Send Message</span>
-                  <Icon icon="bi:arrow-right" />
-                </button>
-              </Div>
-            </form>
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Login
+          </button>
+        </form>
+      </div>
+      </div>
           </Div>
         </Div>
-      </Div>
+      
       <Spacing lg="150" md="80" />
-      <Div className="cs-google_map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
-          allowFullScreen
-          title="Google Map"
-        />
-      </Div>
-      <Spacing lg="50" md="40" />
     </>
   );
 }
