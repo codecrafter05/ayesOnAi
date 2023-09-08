@@ -47,11 +47,12 @@ export default function CaseStudyShowcaseHome() {
   ];
   return (
     <>
-      <Hero7
+    
+      {/* <Hero7
         heroSocialLinks={heroSocialLinks}
         socialLinksHeading="Follow Us"
         showcaseData={showcaseData}
-      />
+      /> */}
     </>
   );
 }
