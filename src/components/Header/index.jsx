@@ -245,6 +245,14 @@ export default function Header({ variant }) {
                         </ul>
                       </DropDown> */}
                     </li>
+                    <li>
+                            <Link
+                              to="case-study-showcase"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              My AI
+                            </Link>
+                          </li>
                   </ul>
                   <span
                     className={

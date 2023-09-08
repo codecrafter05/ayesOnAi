@@ -115,7 +115,7 @@ export default function PortfolioPage() {
         bgSrc="images/portfolio_hero_bg.jpeg"
         pageLinkText="Portfolio"
       />
-      <Spacing lg="145" md="80" />
+      {/* <Spacing lg="145" md="80" /> */}
       {/* <Div className="container">
         <Div className="cs-portfolio_1_heading">
           <SectionHeading title="Some recent work" subtitle="Our Portfolio" />
