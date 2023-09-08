@@ -101,7 +101,7 @@ export default function ServiceDetailsPage() {
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
       <Spacing lg='145' md='80'/>
       <Div className="container cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
@@ -122,14 +122,14 @@ export default function ServiceDetailsPage() {
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
-      <Div className="container">
+      {/* <Div className="container">
         <Cta 
           title='Let’s disscuse make <br />something <i>cool</i> together' 
           btnText='Apply For Meeting' 
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'
         />
-      </Div>
+      </Div> */}
     </>
   )
 }

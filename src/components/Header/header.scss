@@ -387,7 +387,7 @@
           > a {
             position: relative;
             &::after {
-              content: '';
+              // content: '';
               display: inline-block;
               height: 8px;
               width: 8px;

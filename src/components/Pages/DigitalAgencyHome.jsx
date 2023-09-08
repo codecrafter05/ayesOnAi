@@ -146,7 +146,7 @@ export default function DigitalAgencyHome() {
     <>
       {/* Start Hero Section */}
       <Hero4
-        title="We Are <span>A</span>rino <br />Digital Agency"
+        title="<span>P</span>ayment method<br />"
         subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
@@ -185,7 +185,7 @@ export default function DigitalAgencyHome() {
       {/* End Moving Text Section */}
 
       {/* Start About Section */}
-      <Div className="cs-shape_wrap_4">
+      {/* <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
         <Spacing lg="150" md="80" />
@@ -196,7 +196,7 @@ export default function DigitalAgencyHome() {
                 title="Uk’s best digital agency ever"
                 subtitle="Why Choose Us"
                 btnText="Learn More"
-                btnLink="/about"
+                btnLink="/Portfolio"
               />
               <Spacing lg="45" md="45" />
             </Div>
@@ -211,12 +211,12 @@ export default function DigitalAgencyHome() {
             </Div>
           </Div>
         </Div>
-      </Div>
+      </Div> */}
       {/* End About Section */}
 
       {/* Start Projects Section */}
       <Spacing lg="145" md="80" />
-      <Div className="container">
+      {/* <Div className="container">
         <SectionHeading
           title="Portfolio to explore"
           subtitle="Latest Projects"
@@ -261,12 +261,12 @@ export default function DigitalAgencyHome() {
             </>
           )}
         </Div>
-      </Div>
+      </Div> */}
       {/* End Projects Section */}
 
       {/* Start Awards Section */}
-      <Spacing lg="140" md="80" />
-      <Div className="container">
+      {/* <Spacing lg="140" md="80" /> */}
+      {/* <Div className="container">
         <Div className="row">
           <Div className="col-xl-4">
             <SectionHeading
@@ -280,16 +280,16 @@ export default function DigitalAgencyHome() {
             <TimelineSlider />
           </Div>
         </Div>
-      </Div>
-      <Spacing lg="145" md="80" />
+      </Div> */}
+      {/* <Spacing lg="145" md="80" /> */}
       {/* End Awards Section */}
 
       {/* Start Testimonial Section */}
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
       {/* End Testimonial Section */}
 
       {/* Start Blog Section */}
-      <Div className="cs-shape_wrap_4">
+      {/* <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
         <Spacing lg="145" md="80" />
@@ -309,12 +309,12 @@ export default function DigitalAgencyHome() {
             </Div>
           </Div>
         </Div>
-      </Div>
-      <Spacing lg="145" md="80" />
+      </Div> */}
+      {/* <Spacing lg="145" md="80" /> */}
       {/* End Blog Section */}
 
       {/* Start LogoList Section */}
-      <Div className="container">
+      {/* <Div className="container">
         <SectionHeading
           title="Our reputed partner"
           subtitle="Top Clients"
@@ -322,8 +322,8 @@ export default function DigitalAgencyHome() {
         />
         <Spacing lg="70" md="45" />
         <LogoList />
-      </Div>
-      <Spacing lg="150" md="80" />
+      </Div> */}
+      {/* <Spacing lg="150" md="80" /> */}
       {/* End LogoList Section */}
 
       {/* Start CTA Section */}
@@ -331,10 +331,11 @@ export default function DigitalAgencyHome() {
         <Cta
           title="Let’s disscuse make <br />something <i>cool</i> together"
           btnText="Apply For Meeting"
-          btnLink="/contact"
+          btnLink="/Portfolio"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
+      <Spacing lg="140" md="80" />
       {/* End CTA Section */}
     </>
   );
