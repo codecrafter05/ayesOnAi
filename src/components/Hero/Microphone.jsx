@@ -82,7 +82,8 @@ function Microphone() {
           style={{
             margin: "10px",
             padding: "10px",
-            backgroundColor: "lightblue",
+            backgroundColor: "green",
+            color: "white",
             border: "none",
             borderRadius: "5px",
           }}
@@ -94,7 +95,8 @@ function Microphone() {
           style={{
             margin: "10px",
             padding: "10px",
-            backgroundColor: "lightblue",
+            backgroundColor: "red",
+            color: "white",
             border: "none",
             borderRadius: "5px",
           }}

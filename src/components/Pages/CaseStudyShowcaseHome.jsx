@@ -48,12 +48,26 @@ export default function CaseStudyShowcaseHome() {
   ];
   return (
     <>
-      <Hero7
-        heroSocialLinks={heroSocialLinks}
-        socialLinksHeading="Follow Us"
-        showcaseData={showcaseData}
-      />
-      <Microphone />
+      <div
+        style={{
+          display: "grid",
+          gridTemplateRows: "auto 1fr",
+          minHeight: "100vh",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "200px",
+        }}
+      >
+        <div className="camera-container">
+          <Hero7
+            heroSocialLinks={heroSocialLinks}
+            socialLinksHeading="Follow Us"
+            showcaseData={showcaseData}
+          />
+        </div>
+
+        <Microphone />
+      </div>
     </>
   );
 }
