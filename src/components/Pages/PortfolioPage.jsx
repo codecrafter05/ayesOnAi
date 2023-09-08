@@ -107,8 +107,17 @@ export default function PortfolioPage() {
     },
   ];
 
+  const [isSticky, setIsSticky] = useState(false);
+  const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
+  const [mobileToggle, setMobileToggle] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    });
   }, []);
 
   return (
@@ -311,11 +320,12 @@ export default function PortfolioPage() {
               </Div>
               
               <Div className="col-sm-12">
-                <button className="cs-btn cs-style1"   btnLink="/Portfolio" >
+                <button className="cs-btn cs-style1">
                   <span>Send Message</span>
                   <Icon icon="bi:arrow-right" />
                 </button>
               </Div>
+              
             </form>
           </Div>
         </Div>

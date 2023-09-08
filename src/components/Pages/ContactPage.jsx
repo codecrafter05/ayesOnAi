@@ -20,7 +20,7 @@ export default function ContactPage() {
         pageLinkText="Contact"
       />
       <Spacing lg="150" md="80" />
-      {/* <Div className="container">
+      <Div className="container">
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
@@ -71,7 +71,7 @@ export default function ContactPage() {
             </form>
           </Div>
         </Div>
-      </Div> */}
+      </Div>
       <Spacing lg="150" md="80" />
       <Div className="cs-google_map">
         <iframe
