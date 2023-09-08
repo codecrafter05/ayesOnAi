@@ -22,7 +22,7 @@ export default function PricingTableList() {
               timeline='monthly'
               features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
               btnText='Purchase Now'
-              btnLink='/'
+              btnLink='/digital-agency'
             />
           )}
           {tab==='yearly' && (
@@ -33,7 +33,7 @@ export default function PricingTableList() {
               timeline='yearly'
               features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
               btnText='Purchase Now'
-              btnLink='/'
+              btnLink='/digital-agency'
             />
           )}
           <Spacing lg='25' md='25'/>
@@ -47,7 +47,7 @@ export default function PricingTableList() {
               timeline='monthly'
               features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
               btnText='Purchase Now'
-              btnLink='/'
+              btnLink='/digital-agency'
             />
           )}
           {tab==='yearly' && (
@@ -58,7 +58,7 @@ export default function PricingTableList() {
               timeline='yearly'
               features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
               btnText='Purchase Now'
-              btnLink='/'
+              btnLink='/digital-agency'
             />
           )}
           <Spacing lg='25' md='25'/>
@@ -72,7 +72,7 @@ export default function PricingTableList() {
               timeline='monthly'
               features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
               btnText='Purchase Now'
-              btnLink='/'
+              btnLink='/digital-agency'
             />
           )}
           {tab==='yearly' && (
@@ -83,7 +83,7 @@ export default function PricingTableList() {
               timeline='yearly'
               features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
               btnText='Purchase Now'
-              btnLink='/'
+              btnLink='/digital-agency'
             />
           )}
           <Spacing lg='25' md='25'/>
