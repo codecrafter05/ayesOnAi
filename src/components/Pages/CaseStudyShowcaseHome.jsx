@@ -10,12 +10,12 @@ export default function CaseStudyShowcaseHome() {
   }, []);
   const heroSocialLinks = [
     {
-      name: "Behance",
-      links: "/",
+      name: "Instagram",
+      links: "https://www.instagram.com/iinjaz_token/?utm_medium=copy_link",
     },
     {
       name: "Twitter",
-      links: "/",
+      links: "https://twitter.com/iinjaztoken?s=11&t=qQH6SLLfsZJGVtygIFx_Ng",
     },
   ];
 
