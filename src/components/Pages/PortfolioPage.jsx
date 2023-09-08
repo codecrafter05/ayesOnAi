@@ -4,10 +4,13 @@ import { useState } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import PageHeading from '../PageHeading';
-import Portfolio from '../Portfolio';
+// import Portfolio from '../Portfolio';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
+import ContactInfoWidget from '../Widget/ContactInfoWidget';
+
+
 
 export default function PortfolioPage() {
   pageTitle('Portfolio');
@@ -181,7 +184,7 @@ export default function PortfolioPage() {
           )}
         </Div>
       </Div> */}
-      <div>
+      {/* <div>
         <div class="container bootstrap snippets bootdey">
           <h1 class="text-primary">Edit Profile</h1>
           <hr />
@@ -196,11 +199,11 @@ export default function PortfolioPage() {
               </div>
             </div>
             <div class="col-md-9 personal-info">
-              {/* <div class="alert alert-info alert-dismissable">
+              <div class="alert alert-info alert-dismissable">
           <a class="panel-close close" data-dismiss="alert">×</a> 
           <i class="fa fa-coffee"></i>
           This is an <strong>.alert</strong>. Use this to show important messages to the user.
-        </div> */}
+        </div>
               <h3>Personal info</h3>
 
               <form class="form-horizontal" role="form">
@@ -250,9 +253,74 @@ export default function PortfolioPage() {
           </div>
         </div>
         <hr />
-      </div>
+      </div> */}
       {/* jsakhfiuseghiuegh */}
-      <Spacing lg="145" md="80" />
+
+      <Spacing lg="150" md="80" />
+      <Div className="container">
+        <Div className="row">
+          <Div className="col-lg-6">
+            <SectionHeading
+              title="Do you have a project <br/>in your mind?"
+              subtitle="Getting Touch"
+            />
+            {/* <Spacing lg="55" md="30" />
+            <ContactInfoWidget withIcon />
+            <Spacing lg="0" md="50" /> */}
+          </Div>
+          <Div className="col-lg-6">
+            <form action="#" className="row">
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Full Name*</label>
+                <input type="text" className="cs-form_field" />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Email*</label>
+                <input type="text" className="cs-form_field" />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Contry*</label>
+                <input type="text" className="cs-form_field" />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Mobile*</label>
+                <input type="text" className="cs-form_field" />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Jender*</label>
+                <input type="text" className="cs-form_field" />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Jender*</label>
+                <input type="text" className="cs-form_field" />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-12">
+                <label className="cs-primary_color">Description*</label>
+                <textarea
+                  cols="30"
+                  rows="7"
+                  className="cs-form_field"
+                ></textarea>
+                <Spacing lg="25" md="25" />
+              </Div>
+              
+              <Div className="col-sm-12">
+                <button className="cs-btn cs-style1"   btnLink="/Portfolio" >
+                  <span>Send Message</span>
+                  <Icon icon="bi:arrow-right" />
+                </button>
+              </Div>
+            </form>
+          </Div>
+        </Div>
+      </Div>
+      <Spacing lg="150" md="80" />
       <Cta
         title="agency@arino.com"
         bgSrc="/images/cta_bg_2.jpeg"
