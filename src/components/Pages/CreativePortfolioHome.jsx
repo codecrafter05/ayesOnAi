@@ -1,161 +1,183 @@
-import React, { useEffect } from 'react';
-import CaseStudy from '../CaseStudy';
-import Cta from '../Cta';
-import Div from '../Div';
-import Hero3 from '../Hero/Hero3';
-import LogoList from '../LogoList';
-import MovingText from '../MovingText';
-import Portfolio2 from '../Portfolio/Portfolio2';
-import Portfolio3 from '../Portfolio/Portfolio3';
-import SectionHeading from '../SectionHeading';
-import TestimonialSlider from '../Slider/TestimonialSlider';
-import Spacing from '../Spacing';
-import { pageTitle } from '../../helper';
+import React, { Fragment } from "react";
+import { Button, Card, CardBody, CardHeader, Col, Container, Form, Input, Label, Row } from "reactstrap";
+import Spacing from '../Spacing'
 
-export default function CreativePortfolioHome() {
-  pageTitle('Creative Portfolio');
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const heroSocialLinks = [
-    {
-      name: 'Behance',
-      links: '/',
-    },
-    {
-      name: 'Twitter',
-      links: '/',
-    },
-  ];
-  const portfolioData = [
-    {
-      title: 'Winery eCommerce website design & development',
-      subtitle: 'Project 01',
-      btnText: 'See Details',
-      btnLink: '/portfolio/portfolio-details',
-      imageUrl: '/images/portfolio_35.jpeg',
-      category: 'Web Development',
-    },
-    {
-      title: 'Euro corporate agency for healthy environment',
-      subtitle: 'Project 02',
-      btnText: 'See Details',
-      btnLink: '/portfolio/portfolio-details',
-      imageUrl: '/images/portfolio_36.jpeg',
-      category: 'Branding',
-    },
-    {
-      title: 'Powerful admin dashboard design',
-      subtitle: 'Project 03',
-      btnText: 'See Details',
-      btnLink: '/portfolio/portfolio-details',
-      imageUrl: '/images/portfolio_37.jpeg',
-      category: 'UI Design',
-    },
-    {
-      title: 'Crypto financial trading apps for hedge fund',
-      subtitle: 'Project 04',
-      btnText: 'See Details',
-      btnLink: '/portfolio/portfolio-details',
-      imageUrl: '/images/portfolio_38.jpeg',
-      category: 'Apps Design',
-    },
-  ];
+const Create_menu = () => {
   return (
-    <>
-      {/* Start Hero Section */}
-      <Hero3
-        title="Arino Creative <br />Portfolio"
-        btnLink="contact"
-        btnText={`Let's talk`}
-        socialLinksHeading="Follow Us"
-        heroSocialLinks={heroSocialLinks}
-        bgImageUrl="./images/hero_bg_4.jpeg"
-      />
-      {/* End Hero Section */}
 
-      {/* Start Portfolio Section */}
-      <Spacing lg="150" md="80" />
-      {portfolioData.map((item, index) =>
-        index % 2 === 0 ? (
-          <Div key={index}>
-            <Portfolio2
-              title={item.title}
-              subtitle={item.subtitle}
-              btnText={item.btnText}
-              btnLink={item.btnLink}
-              imageUrl={item.imageUrl}
-              category={item.category}
-            />
-            <Spacing lg="100" md="70" />
-          </Div>
-        ) : (
-          <Div key={index}>
-            <Portfolio3
-              title={item.title}
-              subtitle={item.subtitle}
-              btnText={item.btnText}
-              btnLink={item.btnLink}
-              imageUrl={item.imageUrl}
-              category={item.category}
-            />
-            <Spacing lg="100" md="70" />
-          </Div>
-        ),
-      )}
-      {/* End Portfolio Section */}
+    <Fragment>
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Spacing lg='25' md='25' />
+      <Container fluid={true}>
+        <Row>
+          <Col sm="12">
+            <Card>
+              <CardHeader>
+                <h5 style={{ color: 'black' }}>Add Carde</h5>
+              </CardHeader>
+              <CardBody>
+                <Form className="needs-validation">
+                  <div className="form-group">
+                    <Label style={{ color: 'black' }}>
+                      <span>*</span> Package Name
+                    </Label>
+                    <Input
+                      className="form-control"
+                      id="validationCustom0"
+                      type="text"
+                      required=""
+                      placeholder="Field 1"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <Label style={{ color: 'black' }}>
+                      <span>*</span> price
+                    </Label>
+                    <Input
+                      className="form-control"
+                      id="validationCustom1"
+                      type="text"
+                      required=""
+                      placeholder="Field 2"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <Label style={{ color: 'black' }}>
+                      <span>*</span> Category
+                    </Label>
+                    <Input
+                      className="form-control"
+                      id="validationCustom2"
+                      type="text"
+                      required=""
+                      placeholder="Field 3"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <Label style={{ color: 'black' }}>
+                      <span>*</span>  Description
+                    </Label>
+                    <Input
+                      className="form-control"
+                      id="validationCustom2"
+                      type="text"
+                      required=""
+                      placeholder="Field 4"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <Label style={{ color: 'black' }}>
+                      Status
+                    </Label>
+                    <Label className="d-block">
+                      <Input
+                        className="checkbox_animated"
+                        id="chk-ani2"
+                        type="checkbox"
+                      />
+                      <span style={{ color: 'black' }}>Enable the Coupon</span>
+                    </Label>
+                  </div>
+                  <Button type="button" color="primary">
+                    Save
+                  </Button>
+                </Form>
+              </CardBody>
+            </Card>
+          </Col>
+          <Spacing lg='25' md='25' />
+          <Spacing lg='25' md='25' />
+          <Spacing lg='25' md='25' />
+          <Spacing lg='25' md='25' />
+          <Col sm="12">
+          <Card>
+            <CardHeader>
+              <h5 style={{ color: 'black' }}>Add person</h5>
+            </CardHeader>
+            <CardBody>
+              <Form className="needs-validation">
+                <div className="form-group">
+                  <Label style={{ color: 'black' }}>
+                    <span>*</span> Name
+                  </Label>
+                  <Input
+                    className="form-control"
+                    id="validationCustom0"
+                    type="text"
+                    required=""
+                    placeholder="Field 1"
+                  />
+                </div>
+                <div className="form-group">
+                  <Label style={{ color: 'black' }}>
+                    <span>*</span> Email
+                  </Label>
+                  <Input
+                    className="form-control"
+                    id="validationCustom1"
+                    type="text"
+                    required=""
+                    placeholder="Field 2"
+                  />
+                </div>
+                <div className="form-group">
+                  <Label style={{ color: 'black' }}>
+                    <span>*</span> Pasworde
+                  </Label>
+                  <Input
+                    className="form-control"
+                    id="validationCustom2"
+                    type="text"
+                    required=""
+                    placeholder="Field 3"
+                  />
+                </div>
+                <div className="form-group">
+                  <Label style={{ color: 'black' }}>
+                    <span>*</span> Gendar
+                  </Label>
+                  <Input
+                    className="form-control"
+                    id="validationCustom2"
+                    type="text"
+                    required=""
+                    placeholder="Field 3"
+                  />
+                </div>
+                <div className="form-group">
+                  <Label style={{ color: 'black' }}>
+                    Status
+                  </Label>
+                  <Label className="d-block">
+                    <Input
+                      className="checkbox_animated"
+                      id="chk-ani2"
+                      type="checkbox"
+                    />
+                    <span style={{ color: 'black' }}>Enable the Coupon</span>
+                  </Label>
+                </div>
+                <Button type="button" color="primary">
+                  Add
+                </Button>
+              </Form>
+            </CardBody>
+          </Card>
+          </Col>
+        </Row>
+      </Container>
 
-      {/* Start Case Study Section */}
-      <Spacing lg="45" md="10" />
-      <Div className="container">
-        <SectionHeading
-          title="Featured case study"
-          subtitle="Case Study"
-          variant="cs-style1 text-center"
-        />
-        <Spacing lg="90" md="45" />
-      </Div>
-      <CaseStudy
-        title="Analysis lead <br /> more efficiently"
-        bgUrl="/images/case_study_2.jpeg"
-        href="/case-study/case-study-details"
-        variant="cs-style2"
-      />
-      <CaseStudy
-        title="Ubar food app <br /> case study"
-        bgUrl="/images/case_study_1.jpeg"
-        href="/case-study/case-study-details"
-      />
-      <Spacing lg="150" md="80" />
-      {/* End Case Study Section */}
 
-      {/* Start Testimonial Section */}
-      <TestimonialSlider />
-      {/* End Testimonial Section */}
 
-      {/* Start MovingText Section */}
-      <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
-      <Spacing lg="105" md="70" />
-      {/* End MovingText Section */}
-
-      {/* Start LogoList Section */}
-      <Div className="container">
-        <LogoList />
-      </Div>
-      <Spacing lg="150" md="80" />
-      {/* End LogoList Section */}
-
-      {/* Start CTA Section */}
-      <Div className="container">
-        <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
-          btnLink="/contact"
-          bgSrc="/images/cta_bg_3.jpeg"
-        />
-      </Div>
-      {/* End CTA Section */}
-    </>
+    </Fragment>
   );
-}
+};
+
+export default Create_menu;

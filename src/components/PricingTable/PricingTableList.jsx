@@ -5,7 +5,7 @@ import Section from '../Div'
 import Spacing from '../Spacing'
 
 export default function PricingTableList() {
-  const [tab, setTab] = useState('monthly')
+const [tab, setTab] = useState('monthly')
   return (
     <Section className="position-relative">
       <ul className="cs-tab_links cs-style1 cs-mp0 cs-primary_font">
