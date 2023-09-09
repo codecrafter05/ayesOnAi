@@ -9,7 +9,7 @@ import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
-
+import Button from '../Button'
 
 
 export default function PortfolioPage() {
@@ -316,16 +316,10 @@ export default function PortfolioPage() {
                   rows="7"
                   className="cs-form_field"
                 ></textarea>
-                <Spacing lg="25" md="25" />
               </Div>
-              
-              <Div className="col-sm-12">
-                <button className="cs-btn cs-style1">
-                  <span>Send Message</span>
-                  <Icon icon="bi:arrow-right" />
-                </button>
-              </Div>
-              
+               <Div>
+              <Button btnLink='/Photography-Agency' btnText='Next person'/>
+            </Div>
             </form>
           </Div>
         </Div>
