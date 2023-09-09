@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { pageTitle } from "../../helper";
 import Hero7 from "../Hero/Hero7";
 import Microphone from "../Hero/Microphone";
+import LiveLocation from "../Hero/LiveLocation";
 
 export default function CaseStudyShowcaseHome() {
   pageTitle("Case Study Showcase");
@@ -51,11 +52,11 @@ export default function CaseStudyShowcaseHome() {
       <div
         style={{
           display: "grid",
-          gridTemplateRows: "auto 1fr",
+          gridTemplateRows: "auto auto auto", // or "repeat(3, auto)" to be more concise
           minHeight: "100vh",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: "200px",
+          width: "98%", // specify the width
+          marginLeft: "auto", // center the element
+          marginRight: "auto", // center the element
         }}
       >
         <div className="camera-container">
@@ -65,8 +66,8 @@ export default function CaseStudyShowcaseHome() {
             showcaseData={showcaseData}
           />
         </div>
-
         <Microphone />
+        <LiveLocation />
       </div>
     </>
   );

@@ -278,7 +278,7 @@ function Camera() {
     <div className="camera-container">
       <video className="camera-video" ref={videoRef} autoPlay muted />
       <canvas className="camera-canvas" ref={canvasRef} />
-      <ChatBox />
+      <ChatBox className="chat-box" />
     </div>
   );
 }
