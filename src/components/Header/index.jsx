@@ -46,6 +46,14 @@ export default function Header({ variant }) {
                       <NavLink to="/" onClick={() => setMobileToggle(false)}>
                         Home
                       </NavLink>
+                      <li>
+                            <Link
+                              to="creative-portfolio"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              Creative Portfolio
+                            </Link>
+                          </li>
                       {/* <DropDown>
                         <ul>
                           <li>
