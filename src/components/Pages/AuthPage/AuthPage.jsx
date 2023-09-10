@@ -13,10 +13,7 @@ export default function AuthPage({ setUser }) {
 
 
       <div>
-      <Spacing lg="90" md="45" />
-                    <Spacing lg="90" md="45" />
-                    <Spacing lg="90" md="45" />
-                    <Spacing lg="90" md="45" />
+   
         <h3 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP NOW' : 'LOG IN'}</h3>
       </div>
       {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
