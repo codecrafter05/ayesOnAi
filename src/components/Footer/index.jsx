@@ -7,7 +7,7 @@ import SocialWidget from '../Widget/SocialWidget'
 import TextWidget from '../Widget/TextWidget'
 import './footer.scss'
 
-export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
+export default function ({copyrightText, logoSrc, logoAlt, text}) {
   const copyrightLinks = [
     {
       title: 'Terms of Use',
