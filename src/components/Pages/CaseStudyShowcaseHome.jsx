@@ -3,6 +3,7 @@ import { pageTitle } from "../../helper";
 import Hero7 from "../Hero/Hero7";
 import Microphone from "../Hero/Microphone";
 import LiveLocation from "../Hero/LiveLocation";
+import Spacing from "../Spacing";
 
 export default function CaseStudyShowcaseHome() {
   pageTitle("Case Study Showcase");
@@ -49,6 +50,8 @@ export default function CaseStudyShowcaseHome() {
   ];
   return (
     <>
+      <Spacing lg="160" md="80" />
+      <Spacing lg="160" md="80" />
       <div
         style={{
           display: "grid",

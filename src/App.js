@@ -1,3 +1,4 @@
+
 import { Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react';
 import AboutPage from './components/Pages/AboutPage';
@@ -23,6 +24,7 @@ import CaseStudyDetailsPage from './components/Pages/CaseStudyDetailsPage';
 import FaqPage from './components/Pages/FaqPage';
 import AuthPage from './components/Pages/AuthPage/AuthPage';
 import { getUser } from '../src/utilities/users-service';
+
 
 function App() {
   const [user, setUser] = useState(getUser());

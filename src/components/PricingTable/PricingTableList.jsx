@@ -18,9 +18,9 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Standard'
               price='29'
-              currency='$'
+              currency='BD'
               timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
+              features={['AI Vision', 'Voice Assistance', 'AI Monitoring', 'Customer Support']}
               btnText='Purchase Now'
               btnLink='/digital-agency'
             />
@@ -29,9 +29,9 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Standard'
               price='59'
-              currency='$'
+              currency='BD'
               timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
+              features={['AI Vision', 'Voice Assistance', 'AI Monitoring', 'Customer Support']}
               btnText='Purchase Now'
               btnLink='/digital-agency'
             />
@@ -43,9 +43,9 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Professional'
               price='199'
-              currency='$'
+              currency='BD'
               timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
+              features={['Advanced AI Vision', 'Enhanced Voice Assistance', 'Proactive AI Monitoring', 'Product Detector', 'Priority Customer Support']}
               btnText='Purchase Now'
               btnLink='/digital-agency'
             />
@@ -54,9 +54,9 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Professional'
               price='399'
-              currency='$'
+              currency='BD'
               timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
+              features={['Advanced AI Vision', 'Enhanced Voice Assistance', 'Proactive AI Monitoring', 'Product Detector', 'Priority Customer Support']}
               btnText='Purchase Now'
               btnLink='/digital-agency'
             />
@@ -68,9 +68,9 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Ultimate'
               price='299'
-              currency='$'
+              currency='BD'
               timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
+              features={['Premium AI Vision', 'Intelligent Voice Assistance', 'Adaptive AI Monitoring', 'Advanced Product Detector', 'VIP Customer Support', 'Data Privacy Assurance']}
               btnText='Purchase Now'
               btnLink='/digital-agency'
             />
@@ -79,9 +79,9 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Ultimate'
               price='599'
-              currency='$'
+              currency='BD'
               timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
+              features={['Premium AI Vision', 'Intelligent Voice Assistance', 'Adaptive AI Monitoring', 'Advanced Product Detector', 'VIP Customer Support', 'Data Privacy Assurance']}
               btnText='Purchase Now'
               btnLink='/digital-agency'
             />
