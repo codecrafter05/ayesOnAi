@@ -48,16 +48,16 @@ export default function AboutPage() {
         <Div className="row">
           <Div className="col-xl-5 col-lg-7">
             <SectionHeading
-              title="Your trusted partner for business"
-              subtitle="About Our Agency"
+              title="Who We Are & What We Do"
+              subtitle="About Our Services"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+              
+EYES on AI is an innovative technology company committed to leveraging the power of Artificial Intelligence to drastically improve the quality of life for blind and visually impaired individuals. Our mission is to empower these individuals to navigate their world with greater ease, independence, and confidence.
+
+
+We specialize in integrating cutting-edge technologies to create an unparalleled user experience:.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-7">
             <img
-              src="/images/about_img_2.jpeg"
+              src="/images/images.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -82,7 +82,7 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5">
             <img
-              src="/images/about_img_3.jpeg"
+              src="/images/artificial.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -96,8 +96,8 @@ export default function AboutPage() {
       {/* Start Fun Fact Section */}
       <Div className="container">
         <FunFact
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="Facts"
+          subtitle="The project aims to create a unified system to assist visually impaired individuals in identifying products and interacting with their environment. It merges the capabilities of natural language processing (paLM), computer vision for object detection, and voice recognition to provide real-time assistance."
           data={funfaceData}
         />
       </Div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
             <Div className="cs-image_layer cs-style1">
               <Div className="cs-image_layer_in">
                 <img
-                  src="/images/about_img_4.jpeg"
+                  src="/images/download.jpeg"
                   alt="About"
                   className="w-100 cs-radius_15"
                 />
@@ -121,23 +121,23 @@ export default function AboutPage() {
           </Div>
           <Div className="col-xl-5 offset-xl-1 col-lg-6">
             <SectionHeading
-              title="Highly experienced pepole with us"
+              title="Expertise in AI Technologies
+              "
               subtitle="Why Choose Us"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+              Our team comprises leading experts in the fields of artificial intelligence, computer vision, and voice recognition. With our proficiency in Google PaLM, we offer a superior user experience that sets us apart from the competition.
+
+User-Centric Approach
+At EYES on AI, we put the user at the center of everything we do. Our systems are tailored to meet the unique needs of blind and visually impaired individuals, focusing on intuitive design and seamless interactions.
               </p>
               <Spacing lg="15" md="15" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining.
+              Our team comprises leading experts in the fields of artificial intelligence, computer vision, and voice recognition. With our proficiency in Google PaLM, we offer a superior user experience that sets us apart from the competition.
+
+User-Centric Approach
+At EYES on AI, we put the user at the center of everything we do. Our systems are tailored to meet the unique needs of blind and visually impaired individuals, focusing on intuitive design and seamless interactions.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
