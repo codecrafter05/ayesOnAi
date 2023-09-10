@@ -1,6 +1,6 @@
 // AyesOnAi/src/sendToBackend/api.js
 
-// Example function for sending data to your backend AI
+//  test Example function for sending data to your backend AI
 export const sendToBackend = async (objectName, personNumber, transcript) => {
   try {
     const data = {
