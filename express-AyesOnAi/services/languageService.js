@@ -1,5 +1,5 @@
 // AyesOnAi/express-AyesOnAi/services/languageService.js
-
+//backend ai
 require("dotenv").config({ path: "../.env" });
 
 const fetch = require("node-fetch");
