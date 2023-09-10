@@ -5,9 +5,6 @@ import * as posenet from "@tensorflow-models/posenet";
 import "@tensorflow/tfjs";
 import "../../scss/css/Camera.css";
 import ChatBox from "./ChatBox";
-// import Div from "../Div";
-// import FullScreenVerticalSlider from "../Slider/FullScreenVerticalSlider";
-// import VerticalLinks from "../VerticalLinks";
 
 function Camera() {
   const videoRef = useRef(null);
@@ -169,25 +166,7 @@ function Camera() {
                       // Reset the counter if it meets the threshold
                       if (counterRef.current >= 7) {
                         counterRef.current = 0;
-
-                        // Send the prediction to your backend
-                        const response = await fetch(
-                          "http://localhost:3001/api/query",
-                          {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({
-                              prompt: prediction.className,
-                            }),
-                          }
-                        );
-
-                        const result = await response.json();
-
-                        if (result.result) {
-                          console.log("AI response: ", result.result);
-                          // You can also update your UI here to show the AI response
-                        }
+                        // You can update your UI here to show the AI response
                       }
                     }
                     await new Promise((resolve) => setTimeout(resolve, 100));
