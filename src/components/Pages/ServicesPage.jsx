@@ -29,7 +29,7 @@ export default function ServicesPage() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title='Services we can help you with' 
+                title='Our Services' 
                 subtitle='What Can We Do'
               />
               <Spacing lg='90' md='45'/>
@@ -39,7 +39,7 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='UI/UX design'
+                    title='AI Monitoring'
                     link='/service/ui-ux-design'
                     src='/images/service_1.jpeg'
                     alt='Service'
@@ -49,7 +49,7 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='React.js Development'
+                    title='Crypto Monitoring'
                     link='/service/reactjs-development'
                     src='/images/service_2.jpeg'
                     alt='Service'
@@ -58,7 +58,7 @@ export default function ServicesPage() {
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Digital Marketing'
+                    title='AI Vision'
                     link='/service/digital-marketing'
                     src='/images/service_3.jpeg'
                     alt='Service'
@@ -68,7 +68,7 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Technology'
+                    title='Voice Assistance'
                     link='/service/technology'
                     src='/images/service_4.jpeg'
                     alt='Service'

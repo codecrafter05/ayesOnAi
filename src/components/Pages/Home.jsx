@@ -34,20 +34,20 @@ export default function Home() {
   // FunFact Data
   const funfaceData = [
     {
-      title: "Global Happy Clients",
-      factNumber: "40K",
+      title: "Object Detection",
+      factNumber: "1",
     },
     {
-      title: "Project Completed",
-      factNumber: "50K",
+      title: "Speech-to-Text",
+      factNumber: "2",
     },
     {
-      title: "Team Members",
-      factNumber: "245",
+      title: "User Interface",
+      factNumber: "3",
     },
     {
-      title: "Digital products",
-      factNumber: "550",
+      title: "Context Sensitivity",
+      factNumber: "4",
     },
   ];
 
@@ -60,7 +60,7 @@ export default function Home() {
       {/* Start Hero Section */}
       <Hero
         title="AyesOnAi<br/>"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
+        subtitle="The project is designed for blind individuals and combines paLM, computer vision, and voice recognition to provide a voice-activated tool for real-time object identification and auditory assistance."
         btnText="LogIn"
         btnLink="/contact"
         scrollDownId="#service"
@@ -74,8 +74,8 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="Facts"
+          subtitle="The project aims to create a unified system to assist visually impaired individuals in identifying products and interacting with their environment. It merges the capabilities of natural language processing (paLM), computer vision for object detection, and voice recognition to provide real-time assistance."
           data={funfaceData}
         />
       </div>
@@ -88,7 +88,7 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Services we can help you with"
+                title="Our Services"
                 subtitle="What Can We Do"
                 btnText="See All Services"
                 btnLink="/service"
@@ -100,7 +100,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="UI/UX design"
+                    title="AI Monitoring"
                     link="/service/service-details"
                     src="/images/service_1.jpeg"
                     alt="Service"
@@ -110,7 +110,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="React.js Development"
+                    title="Crypto Monitoring"
                     link="/service/service-details"
                     src="/images/service_2.jpeg"
                     alt="Service"
@@ -119,7 +119,7 @@ export default function Home() {
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Digital Marketing"
+                    title="AI Vision"
                     link="/service/service-details"
                     src="/images/service_3.jpeg"
                     alt="Service"
@@ -129,7 +129,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Technology"
+                    title="Voice Assistance"
                     link="/service/service-details"
                     src="/images/service_4.jpeg"
                     alt="Service"
@@ -187,8 +187,7 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
+        Welcome to the unveiling of EYES on AI, the groundbreaking project that empowers blind individuals by seamlessly integrating natural language processing, computer vision, and voice recognition technologies to provide real-time assistance and object identification.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -244,7 +243,7 @@ export default function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
+      <MovingText text="EYES ON AI" />
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 
