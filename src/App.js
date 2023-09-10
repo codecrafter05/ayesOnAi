@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
 import AboutPage from './components/Pages/AboutPage';
 import BlogPage from './components/Pages/BlogPage';
 import BlogDetailsPage from './components/Pages/BlogDetailsPage';
@@ -20,8 +21,12 @@ import CaseStudyShowcaseHome from './components/Pages/CaseStudyShowcaseHome';
 import Layout from './components/Layout';
 import CaseStudyDetailsPage from './components/Pages/CaseStudyDetailsPage';
 import FaqPage from './components/Pages/FaqPage';
+import AuthPage from './components/Pages/AuthPage/AuthPage';
+import { getUser } from '../src/utilities/users-service';
 
 function App() {
+  const [user, setUser] = useState(getUser());
+  console.log('user', user)
   return (
     <>
       <Routes>
@@ -54,6 +59,7 @@ function App() {
             element={<CaseStudyDetailsPage />}
           />
           <Route path="faq" element={<FaqPage />} />
+          <Route path="Auth" element={ <AuthPage setUser={setUser} />}/>
         </Route>
         <Route
           path="/"

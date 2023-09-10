@@ -6,11 +6,16 @@ import "./header.scss";
 import ContactInfoWidget from "../Widget/ContactInfoWidget";
 import Div from "../Div";
 import DropDown from "./DropDown";
+import AuthPage from '../../components/Pages/AuthPage/AuthPage';
+import { getUser } from '../../utilities/users-service';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
+  const [user, setUser] = useState(getUser());
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -35,18 +40,19 @@ export default function Header({ variant }) {
                   <img src="/images/logo.svg" alt="Logo" />
                 </Link>
               </Div>
-              <Div className="cs-main_header_center">
-                <Div className="cs-nav cs-primary_font cs-medium">
-                  <ul
-                    className="cs-nav_list"
-                    style={{ display: `${mobileToggle ? "block" : "none"}` }}
-                  >
-                    <li className="menu-item-has-children">
-                      <NavLink to="/" onClick={() => setMobileToggle(false)}>
-                        Home
-                      </NavLink>
+              {user ?
+                <Div className="cs-main_header_center">
+                  <Div className="cs-nav cs-primary_font cs-medium">
+                    <ul
+                      className="cs-nav_list"
+                      style={{ display: `${mobileToggle ? "block" : "none"}` }}
+                    >
+                      <li className="menu-item-has-children">
+                        <NavLink to="/" onClick={() => setMobileToggle(false)}>
+                          Home
+                        </NavLink>
 
-                      {/* <DropDown>
+                        {/* <DropDown>
                         <ul>
                           <li>
                             <Link to="/" onClick={() => setMobileToggle(false)}>
@@ -103,44 +109,44 @@ export default function Header({ variant }) {
                           </li>
                         </ul>
                       </DropDown> */}
-                    </li>
-                    <li>
-                      <NavLink
-                        to="about"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        About
-                      </NavLink>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <NavLink
-                        to="service"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        Services
-                      </NavLink>
-                      <DropDown>
-                        <ul>
-                          <li>
-                            <Link
-                              to="service"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Services
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/service/service-details"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Service Details
-                            </Link>
-                          </li>
-                        </ul>
-                      </DropDown>
-                    </li>
-                    {/* <li className="menu-item-has-children">
+                      </li>
+                      <li>
+                        <NavLink
+                          to="about"
+                          onClick={() => setMobileToggle(false)}
+                        >
+                          About
+                        </NavLink>
+                      </li>
+                      <li className="menu-item-has-children">
+                        <NavLink
+                          to="service"
+                          onClick={() => setMobileToggle(false)}
+                        >
+                          Services
+                        </NavLink>
+                        <DropDown>
+                          <ul>
+                            <li>
+                              <Link
+                                to="service"
+                                onClick={() => setMobileToggle(false)}
+                              >
+                                Services
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="/service/service-details"
+                                onClick={() => setMobileToggle(false)}
+                              >
+                                Service Details
+                              </Link>
+                            </li>
+                          </ul>
+                        </DropDown>
+                      </li>
+                      {/* <li className="menu-item-has-children">
                       <NavLink
                         to="portfolio"
                         onClick={() => setMobileToggle(false)}
@@ -168,39 +174,39 @@ export default function Header({ variant }) {
                         </ul>
                       </DropDown>
                     </li> */}
-                    <li className="menu-item-has-children">
-                      <NavLink to="blog" onClick={() => setMobileToggle(false)}>
-                        Blog
-                      </NavLink>
-                      <DropDown>
-                        <ul>
-                          <li>
-                            <Link
-                              to="blog"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Blog
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="blog/blog-details"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Blog Details
-                            </Link>
-                          </li>
-                        </ul>
-                      </DropDown>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <Link
-                        to="/contact"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        Contact
-                      </Link>
-                      {/* <DropDown>
+                      <li className="menu-item-has-children">
+                        <NavLink to="blog" onClick={() => setMobileToggle(false)}>
+                          Blog
+                        </NavLink>
+                        <DropDown>
+                          <ul>
+                            <li>
+                              <Link
+                                to="blog"
+                                onClick={() => setMobileToggle(false)}
+                              >
+                                Blog
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="blog/blog-details"
+                                onClick={() => setMobileToggle(false)}
+                              >
+                                Blog Details
+                              </Link>
+                            </li>
+                          </ul>
+                        </DropDown>
+                      </li>
+                      <li className="menu-item-has-children">
+                        <Link
+                          to="/contact"
+                          onClick={() => setMobileToggle(false)}
+                        >
+                          Contact
+                        </Link>
+                        {/* <DropDown>
                         <ul>
                           <li>
                             <Link
@@ -244,36 +250,44 @@ export default function Header({ variant }) {
                           </li>
                         </ul>
                       </DropDown> */}
-                    </li>
-                    <li>
-                      <Link
-                        to="case-study-showcase"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        My AI
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="creative-portfolio"
-                        onClick={() => setMobileToggle(false)}
-                      >
-                        Dashborde
-                      </Link>
-                    </li>
-                  </ul>
-                  <span
-                    className={
-                      mobileToggle
-                        ? "cs-munu_toggle cs-toggle_active"
-                        : "cs-munu_toggle"
-                    }
-                    onClick={() => setMobileToggle(!mobileToggle)}
-                  >
-                    <span></span>
-                  </span>
+                      </li>
+                      <li>
+                        <Link
+                          to="case-study-showcase"
+                          onClick={() => setMobileToggle(false)}
+                        >
+                          My AI
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="creative-portfolio"
+                          onClick={() => setMobileToggle(false)}
+                        >
+                          Dashborde
+                        </Link>
+                      </li>
+                      <li>
+                       
+                          LogOut
+                          <UserLogOut user={user} setUser={setUser} /> 
+                      </li>
+                    </ul>
+                    <span
+                      className={
+                        mobileToggle
+                          ? "cs-munu_toggle cs-toggle_active"
+                          : "cs-munu_toggle"
+                      }
+                      onClick={() => setMobileToggle(!mobileToggle)}
+                    >
+                      <span></span>
+                    </span>
+                  </Div>
                 </Div>
-              </Div>
+                :
+                <div></div>
+              }
               <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
                   <span

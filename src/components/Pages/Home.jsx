@@ -15,6 +15,7 @@ import TeamSlider from "../Slider/TeamSlider";
 import VideoModal from "../VideoModal";
 import TimelineSlider from "../Slider/TimelineSlider";
 import { pageTitle } from "../../helper";
+import AuthPage from '../../components/Pages/AuthPage/AuthPage'; 
 
 export default function Home() {
   pageTitle("Home");
@@ -62,7 +63,7 @@ export default function Home() {
         title="AyesOnAi<br/>"
         subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
         btnText="LogIn"
-        btnLink="/contact"
+        btnLink="/Auth"
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
