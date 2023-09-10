@@ -1,4 +1,6 @@
+//AyesOnAI/client/src/components/Microphone.jsx
 import React, { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -16,13 +18,12 @@ if (SpeechRecognition) {
   );
 }
 
-function Microphone() {
+function Microphone({ handleObjectDetection, lastFaceDetectionResultRef }) {
   const [transcript, setTranscript] = useState("");
-  const [finalTranscript, setFinalTranscript] = useState("");
   const [error, setError] = useState(null);
   const [isListening, setIsListening] = useState(false);
   const recognitionStarted = useRef(false);
-  const timerRef = useRef(null);
+  const finalTranscriptRef = useRef(""); // Store finalTranscript in a ref
 
   const startRecording = () => {
     if (!recognitionStarted.current) {
@@ -36,6 +37,11 @@ function Microphone() {
     recognition.stop();
     recognitionStarted.current = false;
     setIsListening(false);
+
+    // Pass the finalTranscript from the ref to handleObjectDetection
+    handleObjectDetection(null, null, finalTranscriptRef.current);
+    // Clear the ref
+    finalTranscriptRef.current = "";
   };
 
   useEffect(() => {
@@ -45,10 +51,12 @@ function Microphone() {
           const text = event.results[i][0].transcript;
           setTranscript(text);
           if (event.results[i].isFinal) {
-            setFinalTranscript((prevTranscript) => prevTranscript + " " + text);
+            // Update the ref instead of the state
+            finalTranscriptRef.current += " " + text;
             setTimeout(() => {
-              setFinalTranscript("");
-            }, 5000); // clear finalTranscript after 5 seconds
+              setTranscript(""); // Clear the transcript
+              stopRecording(); // Stop recognition when the transcript is final
+            }, 5000); // clear transcript after 5 seconds
           }
         }
       };
@@ -61,7 +69,7 @@ function Microphone() {
         }
       };
     }
-  }, []);
+  }, [handleObjectDetection]);
 
   return (
     <div
@@ -104,10 +112,19 @@ function Microphone() {
           Stop
         </button>
       </div>
-      <p>{finalTranscript}</p>
+      <p>{transcript}</p>
       {error && <p>{error}</p>}
     </div>
   );
 }
+
+Microphone.defaultProps = {
+  handleObjectDetection: () => {},
+};
+
+Microphone.propTypes = {
+  handleObjectDetection: PropTypes.func,
+  lastFaceDetectionResultRef: PropTypes.object,
+};
 
 export default Microphone;

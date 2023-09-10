@@ -6,14 +6,14 @@ import "@tensorflow/tfjs";
 import "../../scss/css/Camera.css";
 import ChatBox from "./ChatBox";
 
-function Camera() {
+function Camera({ handleObjectDetection }) {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const lastPredictionRef = useRef(null);
   const counterRef = useRef(0);
-  const lastFaceDetectionResultRef = useRef(null);
-  const poseHistory = useRef([]);
   const detectionCountsRef = useRef({});
+  const poseHistory = useRef([]);
+  const lastFaceDetectionResultRef = useRef(null);
 
   useEffect(() => {
     const loadModels = async () => {
@@ -30,70 +30,6 @@ function Camera() {
                 canvasRef.current.width = videoRef.current.videoWidth;
                 canvasRef.current.height = videoRef.current.videoHeight;
                 videoRef.current.play();
-
-                const runObjectDetection = async () => {
-                  let previousClassName = undefined;
-                  let counter = 0;
-
-                  while (true) {
-                    if (
-                      videoRef.current.readyState === 4 &&
-                      videoRef.current.videoWidth > 0 &&
-                      videoRef.current.videoHeight > 0
-                    ) {
-                      const predictions = await mobilenetModel.classify(
-                        videoRef.current
-                      );
-                      predictions.sort((a, b) => b.probability - a.probability);
-                      const prediction = predictions[0];
-
-                      if (
-                        prediction.className !== previousClassName &&
-                        counter >= 10
-                      ) {
-                        detectionCountsRef.current[previousClassName] =
-                          (detectionCountsRef.current[previousClassName] || 0) +
-                          1;
-                      }
-
-                      if (prediction.className !== previousClassName) {
-                        counter = 1;
-                      } else {
-                        counter += 1;
-                      }
-
-                      previousClassName = prediction.className;
-
-                      if (
-                        Object.keys(detectionCountsRef.current).length > 0 &&
-                        counter === 1
-                      ) {
-                        let items = Object.keys(detectionCountsRef.current).map(
-                          (className) => {
-                            return detectionCountsRef.current[className] > 1
-                              ? `${detectionCountsRef.current[className]} ${className}s`
-                              : className;
-                          }
-                        );
-
-                        if (items.length > 1) {
-                          const lastItem = items.pop();
-                          console.log(
-                            `Detected an object: ${items.join(
-                              ", "
-                            )}, and ${lastItem}.`
-                          );
-                        } else {
-                          console.log(`Detected an object: ${items[0]}.`);
-                        }
-
-                        detectionCountsRef.current = {};
-                      }
-                    }
-
-                    await new Promise((resolve) => setTimeout(resolve, 1000));
-                  }
-                };
 
                 const runPersonDetection = async () => {
                   while (true) {
@@ -256,11 +192,7 @@ function Camera() {
                   return parsedPhrase;
                 };
 
-                Promise.all([
-                  runDetection(),
-                  runPersonDetection(),
-                  runObjectDetection(),
-                ]);
+                Promise.all([runDetection(), runPersonDetection()]);
               };
             }
           })
