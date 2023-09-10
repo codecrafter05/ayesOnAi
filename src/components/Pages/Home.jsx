@@ -15,6 +15,7 @@ import TeamSlider from "../Slider/TeamSlider";
 import VideoModal from "../VideoModal";
 import TimelineSlider from "../Slider/TimelineSlider";
 import { pageTitle } from "../../helper";
+import AuthPage from '../../components/Pages/AuthPage/AuthPage'; 
 
 export default function Home() {
   pageTitle("Home");
@@ -62,7 +63,7 @@ export default function Home() {
         title="EYES ON AI - THE FUTURE IS NOW<br/>"
         subtitle="The project is designed for blind individuals and combines paLM, computer vision, and voice recognition to provide a voice-activated tool for real-time object identification and auditory assistance."
         btnText="LogIn"
-        btnLink="/contact"
+        btnLink="/Auth"
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
