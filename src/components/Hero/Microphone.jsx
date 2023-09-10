@@ -18,7 +18,12 @@ if (SpeechRecognition) {
   );
 }
 
-function Microphone({ handleObjectDetection, lastFaceDetectionResultRef }) {
+function Microphone({
+  handleObjectDetection,
+  lastFaceDetectionResultRef,
+  lastDetectedObject,
+  lastPersonCount,
+}) {
   const [transcript, setTranscript] = useState("");
   const [error, setError] = useState(null);
   const [isListening, setIsListening] = useState(false);
@@ -38,8 +43,12 @@ function Microphone({ handleObjectDetection, lastFaceDetectionResultRef }) {
     recognitionStarted.current = false;
     setIsListening(false);
 
-    // Pass the finalTranscript from the ref to handleObjectDetection
-    handleObjectDetection(null, null, finalTranscriptRef.current);
+    // Pass the last detected object, person count, and finalTranscript from the ref to handleObjectDetection
+    handleObjectDetection(
+      lastDetectedObject,
+      lastPersonCount,
+      finalTranscriptRef.current
+    );
     // Clear the ref
     finalTranscriptRef.current = "";
   };
@@ -120,11 +129,15 @@ function Microphone({ handleObjectDetection, lastFaceDetectionResultRef }) {
 
 Microphone.defaultProps = {
   handleObjectDetection: () => {},
+  lastDetectedObject: null,
+  lastPersonCount: null,
 };
 
 Microphone.propTypes = {
   handleObjectDetection: PropTypes.func,
   lastFaceDetectionResultRef: PropTypes.object,
+  lastDetectedObject: PropTypes.string,
+  lastPersonCount: PropTypes.number,
 };
 
 export default Microphone;

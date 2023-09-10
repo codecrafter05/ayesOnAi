@@ -1,6 +1,6 @@
 //AyesOnAi/src/App.js
 import { Route, Routes } from "react-router-dom";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import AboutPage from "./components/Pages/AboutPage";
 import BlogPage from "./components/Pages/BlogPage";
 import BlogDetailsPage from "./components/Pages/BlogDetailsPage";
@@ -29,16 +29,29 @@ import Microphone from "./components/Hero/Microphone";
 import { sendToBackend } from "./sendToBackend/api";
 
 function App() {
-  const [objectInfo, setObjectInfo] = useState({ name: "", personNumber: 0 });
+  const [objectInfo, setObjectInfo] = useState({ name: "", personNumber: "" });
+  const [isUpdated, setIsUpdated] = useState(false); // Add this line
   const [user, setUser] = useState(getUser());
   const lastFaceDetectionResultRef = useRef(null);
 
   const handleObjectDetection = (name, personNumber, transcript) => {
-    setObjectInfo({ name, personNumber });
+    setObjectInfo((prevState) => ({
+      name: name || prevState.name,
+      personNumber: personNumber || prevState.personNumber,
+    }));
+
     if (transcript) {
-      sendToBackend(name, personNumber, transcript);
+      sendToBackend(objectInfo.name, objectInfo.personNumber, transcript);
     }
   };
+
+  useEffect(() => {
+    if (isUpdated) {
+      const { name, personNumber } = objectInfo;
+      sendToBackend(name, personNumber);
+      setIsUpdated(false);
+    }
+  }, [isUpdated, objectInfo]);
 
   return (
     <>
@@ -95,13 +108,19 @@ function App() {
       </Routes>
       <div className="camera-container">
         <Hero7
-          handleObjectDetection={handleObjectDetection}
-          lastFaceDetectionResultRef={lastFaceDetectionResultRef}
+          onObjectDetection={(objectName) =>
+            handleObjectDetection(objectName, objectInfo.personNumber)
+          }
+          onPersonDetection={(personNumber) =>
+            handleObjectDetection(objectInfo.name, personNumber)
+          }
         />
       </div>
       <Microphone
         handleObjectDetection={handleObjectDetection}
         lastFaceDetectionResultRef={lastFaceDetectionResultRef}
+        lastDetectedObject={objectInfo.name}
+        lastPersonCount={objectInfo.personNumber}
       />
     </>
   );

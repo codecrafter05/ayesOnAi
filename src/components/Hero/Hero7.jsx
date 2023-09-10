@@ -6,7 +6,7 @@ import "@tensorflow/tfjs";
 import "../../scss/css/Camera.css";
 import ChatBox from "./ChatBox";
 
-function Camera({ handleObjectDetection }) {
+function Camera({ onObjectDetection, onPersonDetection }) {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const lastPredictionRef = useRef(null);
@@ -64,6 +64,9 @@ function Camera({ handleObjectDetection }) {
                         personPhrase,
                         poses,
                       };
+
+                      // Call the onPersonDetection function here
+                      onPersonDetection(avgPoseCount);
                     }
 
                     await new Promise((resolve) => setTimeout(resolve, 100));
@@ -104,6 +107,9 @@ function Camera({ handleObjectDetection }) {
                         counterRef.current = 0;
                         // You can update your UI here to show the AI response
                       }
+
+                      // Call the onObjectDetection function here, inside the if statement
+                      onObjectDetection(prediction.className);
                     }
                     await new Promise((resolve) => setTimeout(resolve, 100));
                   }
