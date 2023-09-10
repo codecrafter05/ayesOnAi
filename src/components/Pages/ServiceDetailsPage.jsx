@@ -110,7 +110,7 @@ export default function ServiceDetailsPage() {
           <Div className="row">
             <Div className="col-xl-5 col-lg-6">
               <SectionHeading
-                title='Some pre questions and answers' 
+                title='FAQ-Frequently Asked Questions' 
                 subtitle='FAQ’s'
               />
               <Spacing lg='90' md='45'/>

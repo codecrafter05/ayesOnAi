@@ -59,7 +59,7 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="AyesOnAi<br/>"
+        title="EYES ON AI - THE FUTURE IS NOW<br/>"
         subtitle="The project is designed for blind individuals and combines paLM, computer vision, and voice recognition to provide a voice-activated tool for real-time object identification and auditory assistance."
         btnText="LogIn"
         btnLink="/contact"
@@ -74,7 +74,7 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="Facts"
+          title="FACTS"
           subtitle="The project aims to create a unified system to assist visually impaired individuals in identifying products and interacting with their environment. It merges the capabilities of natural language processing (paLM), computer vision for object detection, and voice recognition to provide real-time assistance."
           data={funfaceData}
         />
@@ -150,7 +150,7 @@ export default function Home() {
         <Div className="container">
           <SectionHeading
             title="Portfolio to explore"
-            subtitle="Latest Projects"
+            subtitle="Projects"
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -243,7 +243,7 @@ export default function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="EYES ON AI" />
+      <MovingText text="EYES ON AI - THE FUTURE IS NOW-" />
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 
