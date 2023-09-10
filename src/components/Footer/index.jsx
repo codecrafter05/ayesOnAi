@@ -21,19 +21,19 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
   
   const serviceMenu = [
     {
-      title: 'UI/UX design',
+      title: 'AI Vision',
       href: '/service/service-details'
     },
     {
-      title: 'WP development',
+      title: 'AI Monitoring',
       href: '/service/service-details'
     },
     {
-      title: 'Digital marketing',
+      title: 'Voice Assistance',
       href: '/service/service-details'
     },
     {
-      title: 'React development',
+      title: 'Crypto Monitoring',
       href: '/service/service-details'
     },
   ]
@@ -48,7 +48,7 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
                 <TextWidget 
                   logoSrc='/images/footer_logo.svg' 
                   logoAlt='Logo'
-                  text ='Welcome to arino sed ut perspiciae omunde omnis iste natus error sitort voluptatem accusantium.'
+                  text ='Welcome to EYES ON AI That The Future is Now.'
                 />
                 <SocialWidget/>
               </Div>
@@ -67,7 +67,7 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
               <Div className="cs-footer_item">
                 <Newsletter 
                   title='Subscribe' 
-                  subtitle='At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit.' 
+                  subtitle='EYES ON AI The Best Service To Live In The Future.' 
                   placeholder='example@gmail.com'
                 />
               </Div>
@@ -78,7 +78,7 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
       <Div className="container">
         <Div className="cs-bottom_footer">
           <Div className="cs-bottom_footer_left">
-            <Div className="cs-copyright">Copyright © 2022 Laralink.</Div>
+            <Div className="cs-copyright">Copyright © 2023 EYES ON AI.</Div>
           </Div>
           <Div className="cs-bottom_footer_right">
             <MenuWidget menuItems={copyrightLinks} variant=' cs-style2'/>

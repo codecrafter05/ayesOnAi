@@ -39,24 +39,7 @@ export default function Sidebar() {
   ]
   const archiveData = [
     {
-      title: 'Archives',
-      url:'/'
-    },
-    {
-      title: '15 Aug 2022',
-      url:'/'
-    },
-    {
-      title: '20 Sep 2021',
-      url:'/'
-    },
-    {
-      title: '11 Dec 2020',
-      url:'/'
-    },
-    {
-      title: '25 jun 2020',
-      url:'/'
+     
     }
   ]
   const categoryData = [
