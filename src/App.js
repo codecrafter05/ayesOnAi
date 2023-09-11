@@ -34,22 +34,45 @@ function App() {
   const [user, setUser] = useState(getUser());
   const lastFaceDetectionResultRef = useRef(null);
 
-  const handleObjectDetection = (name, personNumber, transcript) => {
+  const handleObjectDetection = async (name, personNumber, transcript) => {
     setObjectInfo((prevState) => ({
       name: name || prevState.name,
       personNumber: personNumber || prevState.personNumber,
     }));
 
     if (transcript) {
-      sendToBackend(objectInfo.name, objectInfo.personNumber, transcript);
+      try {
+        const response = await sendToBackend(
+          objectInfo.name,
+          objectInfo.personNumber,
+          transcript
+        );
+        // Handle the response from the backend here
+        // You can update your state or perform any necessary actions
+        console.log("Response from backend:", response);
+        setIsUpdated(true); // Set isUpdated to trigger the update
+      } catch (error) {
+        // Handle error if the backend request fails
+        console.error(`Failed to send data to the backend: ${error.message}`);
+      }
     }
   };
 
   useEffect(() => {
     if (isUpdated) {
       const { name, personNumber } = objectInfo;
-      sendToBackend(name, personNumber);
-      setIsUpdated(false);
+      // sendToBackend(name, personNumber)
+      //   .then((response) => {
+      //     // Handle the response from the backend if needed
+      //     console.log("Response from backend:", response);
+      //   })
+      //   .catch((error) => {
+      //     // Handle error if the backend request fails
+      //     console.error(`Failed to send data to the backend: ${error.message}`);
+      //   })
+      //   .finally(() => {
+      //     setIsUpdated(false);
+      //   });
     }
   }, [isUpdated, objectInfo]);
 
