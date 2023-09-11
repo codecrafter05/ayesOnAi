@@ -135,19 +135,19 @@ function Camera({ onObjectDetection, onPersonDetection }) {
                   const parsedPrediction = parsePrediction(
                     prediction.className
                   );
-                  const font = "16px sans-serif";
-                  context.font = font;
-                  context.textBaseline = "top";
-                  const x = 10;
-                  const y = 10;
-                  context.fillStyle = "#00FFFF";
-                  const textWidth = context.measureText(
-                    prediction.className
-                  ).width;
-                  const textHeight = parseInt(font, 10);
-                  context.fillRect(x, y, textWidth + 4, textHeight + 4);
-                  context.fillStyle = "#000000";
-                  context.fillText(parsedPrediction, x, y);
+                  // const font = "16px sans-serif";
+                  // context.font = font;
+                  // context.textBaseline = "top";
+                  // const x = 10;
+                  // const y = 10;
+                  // context.fillStyle = "#00FFFF";
+                  // const textWidth = context.measureText(
+                  //   prediction.className
+                  // ).width;
+                  // const textHeight = parseInt(font, 10);
+                  // context.fillRect(x, y, textWidth + 4, textHeight + 4);
+                  // context.fillStyle = "#000000";
+                  // context.fillText(parsedPrediction, x, y);
 
                   if (faceDetectionResult && faceDetectionResult.poses) {
                     const personPhrase = faceDetectionResult.personPhrase;
