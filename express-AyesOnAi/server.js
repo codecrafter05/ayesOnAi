@@ -1,8 +1,11 @@
+//file: AyesOnAi\express-AyesOnAi\server.js
+
+
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-
+const userRoute = require('./routes/users');
 require('dotenv').config();
 // Connect to db after the dotenv above
 require('./config/database');
@@ -19,10 +22,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // middleware that adds the user object from a JWT to req.user
 app.use(require('./config/checkToken'));
-
+app.use('/', userRoute);
 // Put all API routes here (before the catch-all)
 app.use('/api/users', require('./routes/api/users'));
-
 // Protect all routes in the items router
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 
