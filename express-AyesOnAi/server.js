@@ -7,6 +7,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const userRoute = require('./routes/users');
 require('dotenv').config();
+
 const cors = require("cors");
 
 // Connect to db after the dotenv above
@@ -29,6 +30,7 @@ app.use('/api/users', userRoute);
 
 // Put all API routes here (before the catch-all)
 app.use('/api/users', require('./routes/api/users'));
+
 // Protect all routes in the items router
 const ensureLoggedIn = require("./config/ensureLoggedIn");
 
