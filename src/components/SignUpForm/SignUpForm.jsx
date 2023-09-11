@@ -20,7 +20,7 @@ export default class SignUpForm extends Component {
       this.props.setUser(user);
     } catch {
       this.setState({
-        error: 'Sign Up Failed - Try Again'
+        error: 'Sign Up'
       });
     }
   }
