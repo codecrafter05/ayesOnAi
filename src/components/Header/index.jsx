@@ -9,6 +9,7 @@ import DropDown from "./DropDown";
 import AuthPage from '../../components/Pages/AuthPage/AuthPage';
 import { getUser } from '../../utilities/users-service';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import Spacing from '../Spacing';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -270,7 +271,6 @@ export default function Header({ variant }) {
                       </li>
                       <li>
                        
-                          LogOut
                           <UserLogOut user={user} setUser={setUser} /> 
                       </li>
                     </ul>

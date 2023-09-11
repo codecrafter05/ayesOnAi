@@ -7,7 +7,7 @@ const usersController = require('../controllers/api/users');
 router.delete('/:id', usersController.deleteUser);
 router.get('/:id', usersController.getUserById);
 router.put('/update/:id', usersController.updateUserById);
-
+router.post('/create', usersController.create);
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
