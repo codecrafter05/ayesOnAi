@@ -33,8 +33,7 @@ function App() {
   const [isUpdated, setIsUpdated] = useState(false); // Add this line
   const [user, setUser] = useState(getUser());
   const lastFaceDetectionResultRef = useRef(null);
-
-  let speechRender = "";
+  const [speechRender, setSpeechRender] = useState("");
 
   const handleObjectDetection = async (name, personNumber, transcript) => {
     setObjectInfo((prevState) => ({
@@ -52,7 +51,7 @@ function App() {
         // Handle the response from the backend here
         // You can update your state or perform any necessary actions
         console.log("Response from backend:", response);
-        speechRender = response;
+        setSpeechRender(response.output);
         setIsUpdated(true); // Set isUpdated to trigger the update
       } catch (error) {
         // Handle error if the backend request fails
