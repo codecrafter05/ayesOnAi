@@ -1,3 +1,4 @@
+//CaseStudyShowcaseHome.jsx
 import React, { useEffect } from "react";
 import { pageTitle } from "../../helper";
 import Hero7 from "../Hero/Hero7";
@@ -5,11 +6,17 @@ import Microphone from "../Hero/Microphone";
 import LiveLocation from "../Hero/LiveLocation";
 import Spacing from "../Spacing";
 
-export default function CaseStudyShowcaseHome() {
+export default function CaseStudyShowcaseHome({ speechRender }) {
   pageTitle("Case Study Showcase");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // Make it speak here
+    console.log(speechRender);
+  }, [speechRender]);
+
   const heroSocialLinks = [
     {
       name: "Instagram",
