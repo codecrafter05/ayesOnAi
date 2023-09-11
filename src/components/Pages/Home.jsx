@@ -59,8 +59,8 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="EYES ON AI - THE FUTURE IS NOW<br/>"
-        subtitle="The project is designed for blind individuals and combines paLM, computer vision, and voice recognition to provide a voice-activated tool for real-time object identification and auditory assistance."
+        title="EYES ON AI<br/> THE FUTURE IS NOW"
+        subtitle="The project is designed for blind individuals and combines paLM, computer vision, and voice recognition to provide a voice-activated tool for real-time object identification and assistance."
         btnText="LogIn"
         btnLink="/contact"
         scrollDownId="#service"

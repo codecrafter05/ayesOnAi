@@ -49,7 +49,7 @@ export default function PortfolioDetailsPage() {
               </Div>
               <Div className="col-6">
                 <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Location:</h3>
-                <p className='cs-m0'>United Kindom</p>
+                <p className='cs-m0'>Bahrain</p>
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
@@ -82,7 +82,7 @@ export default function PortfolioDetailsPage() {
       </Div>
       <Spacing lg='145' md='80'/>
       <Cta 
-        title='agency@arino.com' 
+        title='info@iinjaz-token.com' 
         bgSrc='/images/cta_bg_2.jpeg'
         variant='rounded-0'
       />

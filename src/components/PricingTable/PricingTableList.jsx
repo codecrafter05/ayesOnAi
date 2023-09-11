@@ -18,7 +18,7 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Standard'
               price='29'
-              currency='BD'
+              currency='$'
               timeline='monthly'
               features={['AI Vision', 'Voice Assistance', 'AI Monitoring', 'Customer Support']}
               btnText='Purchase Now'
@@ -29,7 +29,7 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Standard'
               price='59'
-              currency='BD'
+              currency='$'
               timeline='yearly'
               features={['AI Vision', 'Voice Assistance', 'AI Monitoring', 'Customer Support']}
               btnText='Purchase Now'
@@ -43,7 +43,7 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Professional'
               price='199'
-              currency='BD'
+              currency='$'
               timeline='monthly'
               features={['Advanced AI Vision', 'Enhanced Voice Assistance', 'Proactive AI Monitoring', 'Product Detector', 'Priority Customer Support']}
               btnText='Purchase Now'
@@ -54,7 +54,7 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Professional'
               price='399'
-              currency='BD'
+              currency='$'
               timeline='yearly'
               features={['Advanced AI Vision', 'Enhanced Voice Assistance', 'Proactive AI Monitoring', 'Product Detector', 'Priority Customer Support']}
               btnText='Purchase Now'
@@ -68,7 +68,7 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Ultimate'
               price='299'
-              currency='BD'
+              currency='$'
               timeline='monthly'
               features={['Premium AI Vision', 'Intelligent Voice Assistance', 'Adaptive AI Monitoring', 'Advanced Product Detector', 'VIP Customer Support', 'Data Privacy Assurance']}
               btnText='Purchase Now'
@@ -79,7 +79,7 @@ const [tab, setTab] = useState('monthly')
             <PricingTable 
               title='Ultimate'
               price='599'
-              currency='BD'
+              currency='$'
               timeline='yearly'
               features={['Premium AI Vision', 'Intelligent Voice Assistance', 'Adaptive AI Monitoring', 'Advanced Product Detector', 'VIP Customer Support', 'Data Privacy Assurance']}
               btnText='Purchase Now'

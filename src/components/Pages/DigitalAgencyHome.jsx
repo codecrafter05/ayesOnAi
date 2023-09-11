@@ -151,8 +151,8 @@ export default function DigitalAgencyHome() {
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
-        phoneNumber="+044 546664"
-        email="info@arino.com"
+        phoneNumber="+1 (334) 568-0872"
+        email="info@iinjaz-token.com"
       />
       {/* End Hero Section */}
 
