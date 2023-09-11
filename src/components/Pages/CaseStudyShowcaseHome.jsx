@@ -81,14 +81,14 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
           marginRight: "auto", // center the element
         }}
       >
-        <div className="camera-container">
+        {/* <div className="camera-container">
           <Hero7
             heroSocialLinks={heroSocialLinks}
             socialLinksHeading="Follow Us"
             showcaseData={showcaseData}
           />
         </div>
-        <Microphone />
+        <Microphone /> */}
         <LiveLocation />
       </div>
     </>

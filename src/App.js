@@ -27,6 +27,7 @@ import { getUser } from "../src/utilities/users-service";
 import Hero7 from "./components/Hero/Hero7";
 import Microphone from "./components/Hero/Microphone";
 import { sendToBackend } from "./sendToBackend/api";
+import Spacing from "./components/Spacing";
 
 function App() {
   const [objectInfo, setObjectInfo] = useState({ name: "", personNumber: "" });
@@ -126,27 +127,33 @@ function App() {
           />
           <Route
             path="case-study-showcase"
-            element={<CaseStudyShowcaseHome speechRender={speechRender} />}
+            element={
+              <>
+                <Spacing lg="160" md="80" />
+                <Spacing lg="160" md="80" />
+                <div className="camera-container">
+                  <Hero7
+                    onObjectDetection={(objectName) =>
+                      handleObjectDetection(objectName, objectInfo.personNumber)
+                    }
+                    onPersonDetection={(personNumber) =>
+                      handleObjectDetection(objectInfo.name, personNumber)
+                    }
+                  />
+                </div>
+                <Microphone
+                  handleObjectDetection={handleObjectDetection}
+                  lastFaceDetectionResultRef={lastFaceDetectionResultRef}
+                  lastDetectedObject={objectInfo.name}
+                  lastPersonCount={objectInfo.personNumber}
+                />
+                <CaseStudyShowcaseHome speechRender={speechRender} />
+              </>
+            }
           />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <div className="camera-container">
-        <Hero7
-          onObjectDetection={(objectName) =>
-            handleObjectDetection(objectName, objectInfo.personNumber)
-          }
-          onPersonDetection={(personNumber) =>
-            handleObjectDetection(objectInfo.name, personNumber)
-          }
-        />
-      </div>
-      <Microphone
-        handleObjectDetection={handleObjectDetection}
-        lastFaceDetectionResultRef={lastFaceDetectionResultRef}
-        lastDetectedObject={objectInfo.name}
-        lastPersonCount={objectInfo.personNumber}
-      />
     </>
   );
 }
