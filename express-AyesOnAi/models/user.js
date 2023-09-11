@@ -1,38 +1,73 @@
+// file : AyesOnAi\express-AyesOnAi\models\user.js
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
-const userSchema = new Schema({
-  name: { type: String, required: true },
+const userSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  
   email: {
     type: String,
+    required: true,
     unique: true,
-    trim: true,
-    lowercase: true,
-    required: true
   },
+  
   password: {
     type: String,
-    trim: true,
-    minlength: 3,
-    required: true
-  }
+    required: true,
+  },
+  
+  firstName: {
+    type: String,
+    required: true,
+  },
+  
+  lastName: {
+    type: String,
+    required: true,
+  },
+  
+  dateOfBirth: {
+    type: Date,
+  },
+  
+
+  
+  profilePicture: {
+    type: String,      
+  },
+  
+  address: {
+    street: String,
+    city: String,
+    state: String,
+    postalCode: String,
+    country: String,
+  },
+
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 }, {
-  timestamps: true,
+  timestamps: true,    
   toJSON: {
     transform: function(doc, ret) {
-      delete ret.password;
+      delete ret.password;   
       return ret;
     }
   }
 });
 
 userSchema.pre('save', async function(next) {
-  // 'this' is the user doc
   if (!this.isModified('password')) return next();
-  // the password is either new, or being updated
   this.password = await bcrypt.hash(this.password, SALT_ROUNDS);
 });
 

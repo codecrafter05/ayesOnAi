@@ -1,11 +1,18 @@
+// file : AyesOnAi\express-AyesOnAi\controllers\api\users.js
+
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 
 module.exports = {
   create,
-  login
+  login,
+  deleteUser,
+  getUserById,
+  updateUserById,
 };
+
+
 
 async function create(req, res) {
   try {
@@ -21,6 +28,10 @@ async function create(req, res) {
   }
 }
 
+
+
+//login is here 
+
 async function login(req, res) {
   try {
     // Find the user by their email address
@@ -34,6 +45,60 @@ async function login(req, res) {
     res.status(400).json('Bad Credentials');
   }
 }
+//login is end here 
+
+
+//deleteuser is here 
+async function deleteUser(req, res) {
+  try {
+    // Find the user by their ID and remove them
+    const deletedUser = await User.findByIdAndDelete(req.params.id);
+
+    if (!deletedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json({ message: 'User deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+//deleteuser is end here 
+
+// read user is here 
+
+async function getUserById(req, res) {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+// read user is end here 
+
+// update user  is her 
+
+ async function updateUserById(req, res) {
+  console.log('req.params.id ', req.params.id)
+  console.log('req.body ', req.body)
+  try {
+    // Find the user by their ID and update their data
+      const updatedUser = await User.findByIdAndUpdate( req.params.id, req.body, { new: true })
+      console.log("updateUserById function")
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    console.log("updatedUser", updatedUser)
+    return res.status(200).json(updatedUser);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+}
+// update user  is end her 
 
 
 /*-- Helper Functions --*/

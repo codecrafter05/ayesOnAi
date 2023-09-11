@@ -3,11 +3,12 @@ import React, { useEffect } from "react";
 const MapComponent = () => {
   const loadMap = () => {
     return new Promise((resolve) => {
-      if (
-        !document.querySelector(
-          'script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClQY2MLUdsJcdjF1P9Y4DBWVJ8taAaZW8&callback=initMap"]'
-        )
-      ) {
+      // Check if the script is already loaded
+      const existingScript = document.querySelector(
+        'script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClQY2MLUdsJcdjF1P9Y4DBWVJ8taAaZW8&callback=initMap"]'
+      );
+
+      if (!existingScript) {
         const script = document.createElement("script");
         script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyClQY2MLUdsJcdjF1P9Y4DBWVJ8taAaZW8`;
         script.async = true;
