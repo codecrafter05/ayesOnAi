@@ -21,7 +21,7 @@ export const sendToBackend = async (objectName, personNumber, transcript) => {
     if (response.ok) {
       // Data sent successfully
       const result = await response.json();
-      return result;
+      return result; // Return the response data
     } else {
       // Handle error if the request fails
       throw new Error(`HTTP error! status: ${response.status}`);
