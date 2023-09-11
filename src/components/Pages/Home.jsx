@@ -188,7 +188,7 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-        Welcome to the unveiling of EYES on AI, the groundbreaking project that empowers blind individuals by seamlessly integrating natural language processing, computer vision, and voice recognition technologies to provide real-time assistance and object identification.
+        Welcome to the unveiling of EYES on AI,computer vision, and voice recognition technologies to provide real-time assistance and object identification.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
