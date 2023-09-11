@@ -3,6 +3,11 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 
+
+
+
+
+
 require('dotenv').config();
 // Connect to db after the dotenv above
 require('./config/database');

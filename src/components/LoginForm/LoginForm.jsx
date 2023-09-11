@@ -14,12 +14,8 @@ export default function LoginForm({ setUser }) {
   }
 
   async function handleSubmit(evt) {
-    // Prevent form from being submitted to the server
     evt.preventDefault();
     try {
-      // The promise returned by the signUp service method 
-      // will resolve to the user object included in the
-      // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       setUser(user);
     } catch {
@@ -31,45 +27,53 @@ export default function LoginForm({ setUser }) {
     <div>
       <style>
         {`
-          /* الأنماط المخصصة هنا */
           .form-container {
-            background-color: #ffffff; /* لون خلفية النموذج الأبيض */
-            border: 1px solid #dddddd; /* حدود رفيعة */
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* ظل للعنصر */
-            border-radius: 5px; /* تقوس الزوايا */
-            width: 300px; /* عرض النموذج */
-            text-align: center; /* محتوى النموذج في وسطه */
-            margin: 0 auto; /* يجعل العنصر مركزياً أفقياً داخل الصفحة */
+            background-color: #f4f4f4; 
+            border: 1px solid #ddd; 
+            padding: 40px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+            border-radius: 12px;
+            width: 350px;
+            text-align: center;
+            margin: 50px auto;
           }
 
           label {
-            display: block; /* جعل التسميات كتلة للحفاظ على التنسيق */
-            margin-bottom: 5px;
+            display: block;
+            margin-bottom: 12px;
             font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
           }
 
           input {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 3px;
-            outline: none;
+            border-radius: 6px;
+            font-size: 1em;
           }
 
           button {
             width: 100%;
-            padding: 10px;
-            background-color: #ff5722; /* لون زر تسجيل الدخول الرصاصي */
+            padding: 15px;
+            background-color: #007bff;
             color: #fff;
             border: none;
-            border-radius: 3px;
+            border-radius: 6px;
+            font-size: 1.1em;
             cursor: pointer;
+            transition: background-color 0.3s;
+          }
+
+          button:hover {
+            background-color: #0056b3;
           }
 
           .error-message {
-            color: red; /* لون النص الأحمر لرسالة الخطأ */
+            color: red;
+            font-weight: bold;
           }
         `}
       </style>

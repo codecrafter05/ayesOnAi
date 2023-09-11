@@ -16,14 +16,9 @@ export default class SignUpForm extends Component {
       const formData = { ...this.state };
       delete formData.confirm;
       delete formData.error;
-      // The promise returned by the signUp service method
-      // will resolve to the user object included in the
-      // payload of the JSON Web Token (JWT)
       const user = await signUp(formData);
-      // Update user state with user
       this.props.setUser(user);
     } catch {
-      // Invalid signup
       this.setState({
         error: 'Sign Up Failed - Try Again'
       });
@@ -43,45 +38,58 @@ export default class SignUpForm extends Component {
       <div>
         <style>
           {`
-            /* الأنماط المخصصة هنا */
             .form-container {
-              background-color: #ffffff; /* لون خلفية النموذج الأبيض */
-              border: 1px solid #dddddd; /* حدود رفيعة */
-              padding: 20px;
-              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* ظل للعنصر */
-              border-radius: 5px; /* تقوس الزوايا */
-              width: 300px; /* عرض النموذج */
-              text-align: center; /* محتوى النموذج في وسطه */
-              margin: 0 auto; /* يجعل العنصر مركزياً أفقياً داخل الصفحة */
+              background-color: #f4f4f4;
+              border: 1px solid #ddd;
+              padding: 40px;
+              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+              border-radius: 12px;
+              width: 350px;
+              text-align: center;
+              margin: 50px auto;
             }
 
             label {
-              display: block; /* جعل التسميات كتلة للحفاظ على التنسيق */
-              margin-bottom: 5px;
+              display: block;
+              margin-bottom: 12px;
               font-weight: bold;
+              font-size: 1.1em;
+              color: #333;
             }
 
             input {
               width: 100%;
-              padding: 10px;
-              margin-bottom: 10px;
+              padding: 15px;
+              margin-bottom: 20px;
               border: 1px solid #ccc;
-              border-radius: 3px;
-              outline: none;
+              border-radius: 6px;
+              font-size: 1em;
             }
 
             button {
               width: 100%;
-              padding: 10px;
-              background-color: #ff5722; /* لون زر تسجيل الدخول الرصاصي */
+              padding: 15px;
+              background-color: #007bff;
               color: #fff;
               border: none;
-              border-radius: 3px;
+              border-radius: 6px;
+              font-size: 1.1em;
               cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            button:hover {
+              background-color: #0056b3;
+            }
+
+            button:disabled {
+              background-color: #ccc;
+              cursor: not-allowed;
             }
 
             .error-message {
-              color: red; /* لون النص الأحمر لرسالة الخطأ */
+              color: red;
+              font-weight: bold;
             }
           `}
         </style>
@@ -93,7 +101,7 @@ export default class SignUpForm extends Component {
             <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
             <label>Password</label>
             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-            <label>Confirm</label>
+            <label>Confirm Password</label>
             <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
             <button type="submit" disabled={disable}>SIGN UP</button>
           </form>
