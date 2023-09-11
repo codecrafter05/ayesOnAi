@@ -14,7 +14,19 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
 
   useEffect(() => {
     // Make it speak here
+    console.log("Attempting Speech");
     console.log(speechRender);
+    if ("speechSynthesis" in window && speechRender != "") {
+      console.log("About to speak");
+      window.speechSynthesis.cancel();
+      const synth = window.speechSynthesis;
+
+      const utterance = new SpeechSynthesisUtterance(speechRender);
+      synth.speak(utterance);
+      console.log("Am I speaking:", synth.speaking); // will return true if utterance is currently being spoken
+    } else {
+      console.log("The Web Speech API is not supported by this browser.");
+    }
   }, [speechRender]);
 
   const heroSocialLinks = [
