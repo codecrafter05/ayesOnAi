@@ -90,11 +90,11 @@ export default function PortfolioPage() {
   ];
   const categoryMenu = [
     {
-      title: 'Web Design',
+      title: 'AI Vision',
       category: 'web_design',
     },
     {
-      title: 'UI/UX Design',
+      title: 'AI Monitoring',
       category: 'ui_ux_design',
     },
     {
