@@ -1,9 +1,50 @@
 .UserLogOut {
-  font-size: 1.5vmin;
-  color: var(--text-light);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px; 
+  height: 90px;
 }
 
-.UserLogOut .email {
-  font-size: smaller;
+.circle {
+  width: 40px; 
+  height: 40px;
+  background-color: #FF4A17;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; 
+  cursor: pointer;
+}
+
+.logout-bar {
+  position: absolute; 
+  top: 50px; 
+  left: 0; 
+  display: none;
+  width: 100%;
+}
+
+.circle:hover + .logout-bar, .logout-bar:hover {
+  display: block;
+}
+
+.btn-sm {
+  background-color: #FF4A17;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.cs-site_header .cs-main_header_center .cs-nav ul .circle {
+
+  margin-left: 8px;    
+}
+
+
+.btn-sm:hover {
+  background-color: #FF4A17;
 }
