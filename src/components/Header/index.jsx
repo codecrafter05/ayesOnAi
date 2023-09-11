@@ -260,12 +260,13 @@ export default function Header({ variant }) {
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          to="creative-portfolio"
-                          onClick={() => setMobileToggle(false)}
-                        >
-                          Dashborde
-                        </Link>
+                       
+                                 <a href="http://localhost:3002/dashboard">Dashbord</a>
+                                  
+
+                        
+                         
+                        
                       </li>
                       <li>
                        
