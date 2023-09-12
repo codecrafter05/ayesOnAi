@@ -4,27 +4,28 @@ import Breadcrumb from "../common/breadcrumb";
 import Datatable from "../common/datatable";
 import { Card, CardBody, CardHeader, Container } from "reactstrap";
 
+
 const ListUser = () => {
   // State variable to manage user data
   const [users, setUsers] = useState([]);
 
   // Function to fetch users from the backend API
   const fetchUsers = async () => {
-    console.log('fetched users')
+    // console.log('fetche users')
     try {
       const response = await fetch("http://localhost:3001/api/users"); // Update the URL to match your backend endpoint
-      if (!response.ok) {
-        throw new Error("Failed to fetch users");
-      }
+      // if (!response.ok) {
+      //   throw new Error("Failed to fetch users");
+      // }
       
       const data = await response.json();
-      console.log('data from the backend', data);
+      // console.log('data from the backend', data);
       setUsers(data);
+      console.log(data)
     } catch (error) {
       console.error("Error fetching users:", error);
     }
   };
-
   // Initialize users by fetching data from the backend
   useEffect(() => {
     fetchUsers();
@@ -42,6 +43,8 @@ const ListUser = () => {
         <Card>
           <CardHeader>
             <h5>User Details</h5>
+            
+
           </CardHeader>
           <CardBody>
             <div className="btn-popup pull-right">
@@ -54,12 +57,14 @@ const ListUser = () => {
               id="batchDelete"
               className="category-table user-list order-table coupon-list-delete"
             >
+              <p></p>
               <Datatable
                 multiSelectOption={true}
                 myData={users}
                 pageSize={10}
                 pagination={true}
                 class="-striped -highlight"
+                key={users}
               />
             </div>
           </CardBody>
