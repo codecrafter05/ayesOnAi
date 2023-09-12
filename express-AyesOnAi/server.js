@@ -1,12 +1,11 @@
 //file: AyesOnAi\express-AyesOnAi\server.js
 
-
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const userRoute = require('./routes/users');
-require('dotenv').config();
+const express = require("express");
+const path = require("path");
+const favicon = require("serve-favicon");
+const logger = require("morgan");
+const userRoute = require("./routes/users");
+require("dotenv").config();
 
 const cors = require("cors");
 
@@ -24,18 +23,21 @@ app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "build")));
 
 // middleware that adds the user object from a JWT to req.user
-app.use(require('./config/checkToken'));
-app.use('/', userRoute);
-app.use('/api/users', userRoute);
+app.use(require("./config/checkToken"));
+app.use("/", userRoute);
+app.use("/api/users", userRoute);
 
 // Put all API routes here (before the catch-all)
-app.use('/api/users', require('./routes/api/users'));
+app.use("/api/users", require("./routes/api/users"));
 
 // Protect all routes in the items router
 const ensureLoggedIn = require("./config/ensureLoggedIn");
 
 // Add this before your catch-all route
 app.use("/api/object-detection", require("./routes/api/objectDetection"));
+
+// Add the purchase route
+app.use("/api/purchase", require("./routes/api/purchase"));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
