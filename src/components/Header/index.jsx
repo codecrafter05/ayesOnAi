@@ -6,10 +6,10 @@ import "./header.scss";
 import ContactInfoWidget from "../Widget/ContactInfoWidget";
 import Div from "../Div";
 import DropDown from "./DropDown";
-import AuthPage from '../../components/Pages/AuthPage/AuthPage';
-import { getUser } from '../../utilities/users-service';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
-import Spacing from '../Spacing';
+import AuthPage from "../../components/Pages/AuthPage/AuthPage";
+import { getUser } from "../../utilities/users-service";
+import UserLogOut from "../../components/UserLogOut/UserLogOut";
+import Spacing from "../Spacing";
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -30,8 +30,9 @@ export default function Header({ variant }) {
   return (
     <>
       <header
-        className={`cs-site_header cs-style1 text-uppercase ${variant ? variant : ""
-          } cs-sticky_header ${isSticky ? "cs-sticky_header_active" : ""}`}
+        className={`cs-site_header cs-style1 text-uppercase ${
+          variant ? variant : ""
+        } cs-sticky_header ${isSticky ? "cs-sticky_header_active" : ""}`}
       >
         <Div className="cs-main_header">
           <Div className="container">
@@ -41,7 +42,7 @@ export default function Header({ variant }) {
                   <img src="/images/logo.svg" alt="Logo" />
                 </Link>
               </Div>
-              {user ?
+              {user ? (
                 <Div className="cs-main_header_center">
                   <Div className="cs-nav cs-primary_font cs-medium">
                     <ul
@@ -176,7 +177,10 @@ export default function Header({ variant }) {
                       </DropDown>
                     </li> */}
                       <li className="menu-item-has-children">
-                        <NavLink to="blog" onClick={() => setMobileToggle(false)}>
+                        <NavLink
+                          to="blog"
+                          onClick={() => setMobileToggle(false)}
+                        >
                           Blog
                         </NavLink>
                         <DropDown>
@@ -261,16 +265,9 @@ export default function Header({ variant }) {
                         </Link>
                       </li>
                       <li>
-
                         <a href="http://localhost:3002/dashboard">Dashbord</a>
-
-
-
-
-
                       </li>
                       <li>
-
                         <UserLogOut user={user} setUser={setUser} />
                       </li>
                     </ul>
@@ -286,9 +283,9 @@ export default function Header({ variant }) {
                     </span>
                   </Div>
                 </Div>
-                :
+              ) : (
                 <div></div>
-              }
+              )}
               <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
                   <span
