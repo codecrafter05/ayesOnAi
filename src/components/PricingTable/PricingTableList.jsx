@@ -1,94 +1,135 @@
-import React from 'react'
-import { useState } from 'react'
-import PricingTable from '.'
-import Section from '../Div'
-import Spacing from '../Spacing'
+//PricingTable/PricingTableList.jsx
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import PricingTable from ".";
+import Section from "../Div";
+import Spacing from "../Spacing";
+import PayPalButton from "./PayPalButton";
 
 export default function PricingTableList() {
-const [tab, setTab] = useState('monthly')
+  const [tab, setTab] = useState("monthly");
+  const navigate = useNavigate();
+
+  const handleSuccess = () => {
+    console.log("handleSuccess called");
+    navigate("/digital-agency");
+  };
+
+  const pricingData = {
+    monthly: [
+      {
+        title: "Standard",
+        price: 29,
+        currency: "$",
+        features: [
+          "AI Vision",
+          "Voice Assistance",
+          "AI Monitoring",
+          "Customer Support",
+        ],
+      },
+      {
+        title: "Professional",
+        price: "Coming soon",
+        currency: "",
+        features: [
+          "Advanced AI Vision",
+          "Enhanced Voice Assistance",
+          "Proactive AI Monitoring",
+          "Product Detector",
+          "Priority Customer Support",
+        ],
+      },
+      {
+        title: "Ultimate",
+        price: "Coming soon",
+        currency: "",
+        features: [
+          "Premium AI Vision",
+          "Intelligent Voice Assistance",
+          "Adaptive AI Monitoring",
+          "Advanced Product Detector",
+          "VIP Customer Support",
+          "Data Privacy Assurance",
+        ],
+      },
+    ],
+    yearly: [
+      {
+        title: "Standard",
+        price: 290,
+        currency: "$",
+        features: [
+          "AI Vision",
+          "Voice Assistance",
+          "AI Monitoring",
+          "Customer Support",
+        ],
+      },
+      {
+        title: "Professional",
+        price: "Coming soon",
+        currency: "",
+        features: [
+          "Advanced AI Vision",
+          "Enhanced Voice Assistance",
+          "Proactive AI Monitoring",
+          "Product Detector",
+          "Priority Customer Support",
+        ],
+      },
+      {
+        title: "Ultimate",
+        price: "Coming soon",
+        currency: "",
+        features: [
+          "Premium AI Vision",
+          "Intelligent Voice Assistance",
+          "Adaptive AI Monitoring",
+          "Advanced Product Detector",
+          "VIP Customer Support",
+          "Data Privacy Assurance",
+        ],
+      },
+    ],
+  };
+
   return (
     <Section className="position-relative">
       <ul className="cs-tab_links cs-style1 cs-mp0 cs-primary_font">
-        <li className={tab === 'monthly' ? "active" : ""} onClick={()=>setTab('monthly')}>Monthly</li>
-        <li className={tab === 'yearly' ? "active" : ""} onClick={()=>setTab('yearly')}>Yearly</li>
+        <li
+          className={tab === "monthly" ? "active" : ""}
+          onClick={() => setTab("monthly")}
+        >
+          Monthly
+        </li>
+        <li
+          className={tab === "yearly" ? "active" : ""}
+          onClick={() => setTab("yearly")}
+        >
+          Yearly
+        </li>
       </ul>
       <Section className="row">
-        <Section className="col-lg-4">
-          {tab==='monthly' && (
-            <PricingTable 
-              title='Standard'
-              price='29'
-              currency='$'
-              timeline='monthly'
-              features={['AI Vision', 'Voice Assistance', 'AI Monitoring', 'Customer Support']}
-              btnText='Purchase Now'
-              btnLink='/digital-agency'
+        {pricingData[tab].map((item, index) => (
+          <Section className="col-lg-4" key={index}>
+            <PricingTable
+              title={item.title}
+              price={item.price}
+              currency={item.currency}
+              timeline={tab}
+              features={item.features}
             />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Standard'
-              price='59'
-              currency='$'
-              timeline='yearly'
-              features={['AI Vision', 'Voice Assistance', 'AI Monitoring', 'Customer Support']}
-              btnText='Purchase Now'
-              btnLink='/digital-agency'
-            />
-          )}
-          <Spacing lg='25' md='25'/>
-        </Section>
-        <Section className="col-lg-4">
-         {tab==='monthly' && (
-            <PricingTable 
-              title='Professional'
-              price='199'
-              currency='$'
-              timeline='monthly'
-              features={['Advanced AI Vision', 'Enhanced Voice Assistance', 'Proactive AI Monitoring', 'Product Detector', 'Priority Customer Support']}
-              btnText='Purchase Now'
-              btnLink='/digital-agency'
-            />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Professional'
-              price='399'
-              currency='$'
-              timeline='yearly'
-              features={['Advanced AI Vision', 'Enhanced Voice Assistance', 'Proactive AI Monitoring', 'Product Detector', 'Priority Customer Support']}
-              btnText='Purchase Now'
-              btnLink='/digital-agency'
-            />
-          )}
-          <Spacing lg='25' md='25'/>
-        </Section>
-        <Section className="col-lg-4">
-          {tab==='monthly' && (
-            <PricingTable 
-              title='Ultimate'
-              price='299'
-              currency='$'
-              timeline='monthly'
-              features={['Premium AI Vision', 'Intelligent Voice Assistance', 'Adaptive AI Monitoring', 'Advanced Product Detector', 'VIP Customer Support', 'Data Privacy Assurance']}
-              btnText='Purchase Now'
-              btnLink='/digital-agency'
-            />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Ultimate'
-              price='599'
-              currency='$'
-              timeline='yearly'
-              features={['Premium AI Vision', 'Intelligent Voice Assistance', 'Adaptive AI Monitoring', 'Advanced Product Detector', 'VIP Customer Support', 'Data Privacy Assurance']}
-              btnText='Purchase Now'
-              btnLink='/digital-agency'
-            />
-          )}
-          <Spacing lg='25' md='25'/>
-        </Section>
+            <Spacing lg="25" md="25" />
+            {item.title === "Standard" ? (
+              <PayPalButton price={item.price} onSuccess={handleSuccess} />
+            ) : (
+              <div>Coming soon</div>
+            )}
+            <Spacing lg="25" md="25" />
+          </Section>
+        ))}
       </Section>
     </Section>
-  )
+  );
 }
