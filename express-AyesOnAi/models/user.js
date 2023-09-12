@@ -9,13 +9,13 @@ const SALT_ROUNDS = 6;
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
   },
   
   email: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
   },
   
@@ -26,12 +26,12 @@ const userSchema = new mongoose.Schema({
   
   firstName: {
     type: String,
-    required: true,
+    // required: true,
   },
   
   lastName: {
     type: String,
-    required: true,
+    // required: true,
   },
   
   dateOfBirth: {

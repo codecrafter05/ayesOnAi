@@ -9,9 +9,6 @@ router.get('/:id', usersController.getUserById);
 router.put('/update/:id', usersController.updateUserById);
 router.post('/create', usersController.create);
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', usersController.getAllUsers);
 
 module.exports = router;
