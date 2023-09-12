@@ -28,7 +28,7 @@ export default function ServiceDetailsPage() {
       <Div className="container">
         <SectionHeading 
           title='Design working process' 
-          subtitle='UI/UX Design' 
+          subtitle='AI Vision' 
           variant='cs-style1 text-center'
         />
         <Spacing lg='90' md='45'/>

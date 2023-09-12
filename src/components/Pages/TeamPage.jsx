@@ -12,7 +12,7 @@ export default function TeamPage() {
   const teamData = [
     {
       memberImage: '/images/member_1.jpeg',
-      memberName: 'Mustfa',
+      memberName: 'Mustfa Qarooni',
       memberDesignation: 'Product Designer',
       memberSocial: {
         linkedin: '/',
@@ -22,8 +22,8 @@ export default function TeamPage() {
       },
     },
     {
-      memberImage: '/images/member_2.jpeg',
-      memberName: 'Olinaz Fushi',
+      memberImage: '/images/speed2.png',
+      memberName: 'Yusuf Hakeem',
       memberDesignation: 'Product Designer',
       memberSocial: {
         linkedin: '/',
@@ -45,7 +45,7 @@ export default function TeamPage() {
     },
     {
       memberImage: '/images/member_4.jpeg',
-      memberName: 'Rashid',
+      memberName: 'Rashid Althawadi',
       memberDesignation: 'WP Developer',
       memberSocial: {
         linkedin: '/',
@@ -77,7 +77,7 @@ export default function TeamPage() {
       },
     },
     {
-      memberImage: '/images/member_1.jpeg',
+      memberImage: '/images/speed3.jpej',
       memberName: 'Melon Bulgery',
       memberDesignation: 'Product Designer',
       memberSocial: {
