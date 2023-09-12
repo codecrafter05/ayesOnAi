@@ -14,26 +14,26 @@ export default function BlogPage() {
     {
       thumb:'/images/post_4.jpeg',
       title:'A.I will take all human job within next year',
-      subtitle:'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-      date:'07 Mar 2022',
+      subtitle:'The notion that AI will take all human jobs within the next year is an overstatement and not supported by current trends or expert opinion, the timeline for this kind of massive labor displacement is generally thought to be much longer.',
+      date:'10 Sep 2023',
       category:'Tech',
       categoryHref:'/blog',
       href:'/blog/blog-details'
     },
     {
       thumb:'/images/post_5.jpeg',
-      title:'Creative studio programm coming soon',
-      subtitle:'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-      date:'05 Mar 2022',
-      category:'Photography',
+      title:'Creative studio For AI Detection',
+      subtitle:'The term "Creative Studio for AI Detection" could refer to a variety of concepts depending on the context in which it',
+      date:'11 Sep 2023',
+      category:'AI Detection',
       categoryHref:'/blog',
       href:'/blog/blog-details'
     },
     {
       thumb:'/images/post_6.jpeg',
       title:'Artistic mind will be great for creation',
-      subtitle:'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-      date:'04 Mar 2022',
+      subtitle:'Absolutely, an artistic mind brings a unique perspective to any creation, be it traditional art, design, or even technological innovations like AI. The blend of art and technology, often referred to as "ArtTech," is a growing field where artistic creativity meets computational power.',
+      date:'12 Sep 2023',
       category:'Tech',
       categoryHref:'/blog',
       href:'/blog/blog-details'

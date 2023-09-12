@@ -21,8 +21,8 @@ export default function CaseStudyDetailsPage() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Importance of storytelling and influencer marketing in social media marketing"
-          subtitle="Marketing"
+          title="The Future of AI Will Be Strong"
+          subtitle="The future of AI indeed looks promising, both in terms of technical advancements and its applications across various sectors"
           variant="cs-style1 text-center"
         />
         <Spacing lg="90" md="45" />
@@ -35,18 +35,7 @@ export default function CaseStudyDetailsPage() {
         <h2 className="cs-font_38 text-center">Case Study Overview</h2>
         <Spacing lg="60" md="45" />
         <p className="cs-m0">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium voltire doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Ipsum quia dolor sit amet, consectetur
+        A case study overview on AI in the field of computer vision can shed light on the applications, challenges, and opportunities presented by these technologies. Computer vision is a subfield of artificial intelligence that focuses on enabling machines to interpret and understand the visual world.
         </p>
         <Spacing lg="65" md="45" />
         <Div className="row">
@@ -78,19 +67,10 @@ export default function CaseStudyDetailsPage() {
           <Spacing lg="90" md="45" />
           <Div className="row align-items-center cs-column_reverse_lg">
             <Div className="col-lg-5">
-              <h3 className="cs-font_30 cs-m0">Marketing strategy</h3>
+              <h3 className="cs-font_30 cs-m0">Voice Assistance</h3>
               <Spacing lg="45" md="30" />
               <p className="cs-m0">
-                Our goal perspiciatis unde omnis iste natus error sit voluptatem
-                bolaru accusantium voltire doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                voluptatem. <br />
-                <br />
-                Most cases aspernatur aut odit aut fugit, sed quia consequuntur
-                magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsum
-                quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora incidunt ut labore et dolore.
+              Voice assistants on computers, laptops, and mobile devices are increasingly becoming more integrated with camera functionalities. This offers a range of features and utilities that can be beneficial in both personal and professional settings.
               </p>
             </Div>
             <Div className="col-lg-6 offset-lg-1 text-center">
@@ -117,19 +97,12 @@ export default function CaseStudyDetailsPage() {
               <Spacing lg="0" md="40" />
             </Div>
             <Div className="col-lg-5 offset-lg-1">
-              <h3 className="cs-font_30 cs-m0">Branding guideline</h3>
+              <h3 className="cs-font_30 cs-m0">AI Monitoring</h3>
               <Spacing lg="45" md="30" />
               <p className="cs-m0">
-                Our goal perspiciatis unde omnis iste natus error sit voluptatem
-                bolaru accusantium voltire doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                voluptatem. <br />
+              AI monitoring refers to the use of artificial intelligence technologies to automatically observe, analyze, and act upon various types of data or activities within a given environment. AI monitoring can be applied in numerous sectors including healthcare, cybersecurity, industrial operations, and customer service, among others. <br />
                 <br />
-                Most cases aspernatur aut odit aut fugit, sed quia consequuntur
-                magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsum
-                quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora incidunt ut labore et dolore.
+                AI monitoring refers to the use of artificial intelligence technologies to automatically observe, analyze, and act upon various types of data or activities within a given environment. AI monitoring can be applied in numerous sectors including healthcare, cybersecurity, industrial operations, and customer service, among others.
               </p>
             </Div>
           </Div>
@@ -139,22 +112,10 @@ export default function CaseStudyDetailsPage() {
       <Spacing lg="140" md="80" />
       <Div className="container text-center">
         <Div className="row col-lg-10 offset-lg-1">
-          <h2 className="cs-font_38 cs-m0">Result of The Case Study</h2>
+          <h2 className="cs-font_38 cs-m0">Result of The Case Study on ai</h2>
           <Spacing lg="60" md="45" />
           <p className="cs-m0">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium voltire doloremque laudantium, totam rem aperiam, eaque
-            ipsa quae ab illo inventore veritatis et quasi architecto beatae
-            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-            sit asperna aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Ipsum quia dolor sit
-            amet, consectetur, adipisci velit, sed quia non numquam eius modi
-            tempora incidunt ut labore et dolore magnam aliquam quaerat
-            voluptatem. Ut enim ad nima veniam, quis nostrum exercitationem
-            ullam corporis suscipit.Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Ipsum quia dolor sit
-            amet, consectetur
+          Efficiency: Perhaps the AI system reduced data processing time from hours to minutes, representing a 90% time savings.Accuracy: For instance, if the project was about medical diagnoses, maybe the AI achieved a diagnostic accuracy of 98%, surpassing human accuracy levels.User Experience: Feedback from users might indicate that the AI system is user-friendly and intuitive.
           </p>
         </Div>
       </Div>

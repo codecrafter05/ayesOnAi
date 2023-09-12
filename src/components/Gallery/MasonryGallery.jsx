@@ -139,20 +139,20 @@ export default function MasonryGallery() {
   ];
   const categoryMenu = [
     {
-      title: 'Wedding',
-      category: 'wedding',
+      title: 'AI Vision',
+      category: 'AI Vision',
     },
     {
-      title: 'Portrait',
-      category: 'portrait',
+      title: 'AI Monitoring',
+      category: 'AI Monitoring',
     },
     {
-      title: 'Fashion',
-      category: 'fashion',
+      title: 'Voice Assistance',
+      category: 'Voice Assistance',
     },
     {
-      title: 'Commercial',
-      category: 'commercial',
+      title: 'Traker',
+      category: 'Traker',
     },
     {
       title: 'Landscape',

@@ -17,15 +17,15 @@ export default function Sidebar() {
       url:'/'
     },
     {
-      title: 'Artwork',
+      title: 'AI Vision',
       url:'/'
     },
     {
-      title: 'Marketing',
+      title: 'AI Monitoring',
       url:'/'
     },
     {
-      title: 'Information',
+      title: 'Voice Assistance',
       url:'/'
     },
     {
@@ -33,7 +33,7 @@ export default function Sidebar() {
       url:'/'
     },
     {
-      title: 'Wordpress',
+      title: 'User Experience',
       url:'/'
     },
   ]
@@ -67,27 +67,27 @@ export default function Sidebar() {
   const recentPostData = [
     {
       title: 'How to studio setup...',
-      thumb: '/images/recent_post_1.jpeg',
+      thumb: '/images/ai.jpg',
       href: '/blog/blog-details',
-      date: '15 Aug 2022'
+      date: '10 Sep 2023'
     },
     {
       title: 'Creative people mind...',
       thumb: '/images/recent_post_2.jpeg',
       href: '/blog/blog-details',
-      date: '14 Aug 2022'
+      date: '11 Sep 2023'
     },
     {
       title: 'AI take over human...',
       thumb: '/images/recent_post_3.jpeg',
       href: '/blog/blog-details',
-      date: '13 Aug 2022'
+      date: '12 Sep 2023'
     },
     {
       title: 'You should now add...',
       thumb: '/images/recent_post_4.jpeg',
       href: '/blog/blog-details',
-      date: '12 Aug 2022'
+      date: '10 Sep 2023'
     },
   ]
   return (

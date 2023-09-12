@@ -42,27 +42,27 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
 
   const showcaseData = [
     {
-      title: "Uber food app <br />case study",
+      title: "AI Vision For Blinds <br />case study",
       imgUrl: "/images/slider_5.jpeg",
       href: "/case-study/case-study-details",
     },
     {
-      title: "Uber food app <br />case study",
+      title: "The Voice Assistance For Clients <br />case study",
       imgUrl: "/images/slider_6.jpeg",
       href: "/case-study/case-study-details",
     },
     {
-      title: "Uber food app <br />case study",
+      title: "The AI Monitoring <br />case study",
       imgUrl: "/images/slider_7.jpeg",
       href: "/case-study/case-study-details",
     },
     {
-      title: "Uber food app <br />case study",
+      title: "Crypto Monitoring <br />case study",
       imgUrl: "/images/slider_8.jpeg",
       href: "/case-study/case-study-details",
     },
     {
-      title: "Uber food app <br />case study",
+      title: "User Experience <br />case study",
       imgUrl: "/images/slider_9.jpeg",
       href: "/case-study/case-study-details",
     },

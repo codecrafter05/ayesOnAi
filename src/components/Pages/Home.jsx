@@ -120,14 +120,17 @@ export default function Home({user}) {
                   <Spacing lg="0" md="30" />
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="AI Vision"
-                    link="/service/service-details"
-                    src="/images/service_3.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
+  <a href="/https://alwatannews.net/Business/article/976657/%D9%85%D8%B7%D9%88%D8%B1-%D8%A5%D9%86%D8%AC%D8%A7%D8%B2-%D9%84%D8%A7%D9%84%D9%88%D8%B7%D9%86-%D9%85%D9%86-%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A3%D9%84%D8%B2%D9%85%D9%86%D8%A7-%D8%A3%D9%86%D9%81%D8%B3%D9%86%D8%A7-%D8%A8%D8%AA%D8%B9%D9%88%D9%8A%D8%B6-%D8%A7%D9%84%D8%AE%D8%A7%D8%B3%D8%B1%D9%8A%D9%86-%D8%A5%D8%B0%D8%A7-%D8%A3%D8%AE%D8%B7%D8%A3%D9%86%D8%A7">
+    <Card
+      title="AI Vision"
+      link="/service/service-details"
+      src="/images/service_3.jpeg"
+      alt="Service"
+    />
+  </a>
+  <Spacing lg="0" md="30" />
+</Div>
+
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
@@ -193,7 +196,7 @@ export default function Home({user}) {
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
+          videoSrc="https://www.youtube.com/watch?v=n-u5FNchaBs"
           bgUrl="/images/video_bg.jpeg"
         />
       </Div>
