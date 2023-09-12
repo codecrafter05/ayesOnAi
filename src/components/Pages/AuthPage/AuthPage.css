@@ -1,5 +1,5 @@
 .AuthPage {
-    height: 100vh; /* Take up full viewport height */
+    height: 70vh; /* Take up full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Move content to the bottom */
