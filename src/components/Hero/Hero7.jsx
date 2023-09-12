@@ -59,7 +59,7 @@ function Camera({ onObjectDetection, onPersonDetection }) {
                           poseHistory.current.length
                       );
 
-                      let personPhrase = `There are ${avgPoseCount} people in the view.`;
+                      let personPhrase = avgPoseCount;
                       lastFaceDetectionResultRef.current = {
                         personPhrase,
                         poses,

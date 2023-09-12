@@ -1,8 +1,8 @@
 //CaseStudyShowcaseHome.jsx
 import React, { useEffect } from "react";
 import { pageTitle } from "../../helper";
-import Hero7 from "../Hero/Hero7";
-import Microphone from "../Hero/Microphone";
+// import Hero7 from "../Hero/Hero7";
+// import Microphone from "../Hero/Microphone";
 import LiveLocation from "../Hero/LiveLocation";
 import Spacing from "../Spacing";
 
@@ -69,8 +69,6 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
   ];
   return (
     <>
-      <Spacing lg="160" md="80" />
-      <Spacing lg="160" md="80" />
       <div
         style={{
           display: "grid",
@@ -81,14 +79,6 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
           marginRight: "auto", // center the element
         }}
       >
-        {/* <div className="camera-container">
-          <Hero7
-            heroSocialLinks={heroSocialLinks}
-            socialLinksHeading="Follow Us"
-            showcaseData={showcaseData}
-          />
-        </div>
-        <Microphone /> */}
         <LiveLocation />
       </div>
     </>

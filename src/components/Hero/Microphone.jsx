@@ -1,4 +1,5 @@
 //AyesOnAI/client/src/components/Microphone.jsx
+//AyesOnAI/client/src/components/Microphone.jsx
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
@@ -13,9 +14,9 @@ if (SpeechRecognition) {
   recognition.continuous = true;
   recognition.lang = "en-US";
 } else {
-  console.log(
-    "Your browser does not support speech recognition software. Try Chrome 25 or later."
-  );
+  // console.log(
+  //   "Your browser does not support speech recognition software. Try Chrome 25 or later."
+  // );
 }
 
 function Microphone({
@@ -35,6 +36,7 @@ function Microphone({
       recognition.start();
       recognitionStarted.current = true;
       setIsListening(true);
+      console.log("Listening started");
     }
   };
 
@@ -42,6 +44,7 @@ function Microphone({
     recognition.stop();
     recognitionStarted.current = false;
     setIsListening(false);
+    console.log("Listening stopped");
 
     // Pass the last detected object, person count, and finalTranscript from the ref to handleObjectDetection
     handleObjectDetection(
@@ -56,21 +59,32 @@ function Microphone({
   useEffect(() => {
     if (recognition) {
       recognition.onresult = function (event) {
+        // console.log("Result event triggered");
+        let interimTranscript = "";
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           const text = event.results[i][0].transcript;
-          setTranscript(text);
           if (event.results[i].isFinal) {
-            // Update the ref instead of the state
             finalTranscriptRef.current += " " + text;
-            setTimeout(() => {
-              setTranscript(""); // Clear the transcript
-              stopRecording(); // Stop recognition when the transcript is final
-            }, 5000); // clear transcript after 5 seconds
+          } else {
+            interimTranscript += text;
           }
+        }
+        setTranscript(interimTranscript);
+
+        // When a final result is obtained, pass it to the back end.
+        if (finalTranscriptRef.current) {
+          handleObjectDetection(
+            lastDetectedObject,
+            lastPersonCount,
+            finalTranscriptRef.current
+          );
+          finalTranscriptRef.current = ""; // Clear finalTranscriptRef after it's been handled.
         }
       };
 
       recognition.onerror = function (event) {
+        console.error("Speech recognition error detected:", event.error);
+        console.error("Additional error details", event);
         if (event.error === "no-speech") {
           console.log("No speech was detected. Try again.");
         } else {
