@@ -15,9 +15,9 @@ import TeamSlider from "../Slider/TeamSlider";
 import VideoModal from "../VideoModal";
 import TimelineSlider from "../Slider/TimelineSlider";
 import { pageTitle } from "../../helper";
-import AuthPage from '../../components/Pages/AuthPage/AuthPage'; 
+import AuthPage from '../../components/Pages/AuthPage/AuthPage';
 
-export default function Home({user}) {
+export default function Home({ user }) {
   pageTitle("Home");
 
   // Hero Social Links
@@ -69,7 +69,7 @@ export default function Home({user}) {
         heroSocialLinks={heroSocialLinks}
         bgImageUrl="/images/hero_bg.jpeg"
       />
-      
+
       {/* End Hero Section */}
 
       {/* Start FunFact Section */}
@@ -120,16 +120,16 @@ export default function Home({user}) {
                   <Spacing lg="0" md="30" />
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
-  <a href="/https://alwatannews.net/Business/article/976657/%D9%85%D8%B7%D9%88%D8%B1-%D8%A5%D9%86%D8%AC%D8%A7%D8%B2-%D9%84%D8%A7%D9%84%D9%88%D8%B7%D9%86-%D9%85%D9%86-%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A3%D9%84%D8%B2%D9%85%D9%86%D8%A7-%D8%A3%D9%86%D9%81%D8%B3%D9%86%D8%A7-%D8%A8%D8%AA%D8%B9%D9%88%D9%8A%D8%B6-%D8%A7%D9%84%D8%AE%D8%A7%D8%B3%D8%B1%D9%8A%D9%86-%D8%A5%D8%B0%D8%A7-%D8%A3%D8%AE%D8%B7%D8%A3%D9%86%D8%A7">
-    <Card
-      title="AI Vision"
-      link="/service/service-details"
-      src="/images/service_3.jpeg"
-      alt="Service"
-    />
-  </a>
-  <Spacing lg="0" md="30" />
-</Div>
+                  <a href="/https://alwatannews.net/Business/article/976657/%D9%85%D8%B7%D9%88%D8%B1-%D8%A5%D9%86%D8%AC%D8%A7%D8%B2-%D9%84%D8%A7%D9%84%D9%88%D8%B7%D9%86-%D9%85%D9%86-%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A3%D9%84%D8%B2%D9%85%D9%86%D8%A7-%D8%A3%D9%86%D9%81%D8%B3%D9%86%D8%A7-%D8%A8%D8%AA%D8%B9%D9%88%D9%8A%D8%B6-%D8%A7%D9%84%D8%AE%D8%A7%D8%B3%D8%B1%D9%8A%D9%86-%D8%A5%D8%B0%D8%A7-%D8%A3%D8%AE%D8%B7%D8%A3%D9%86%D8%A7">
+                    <Card
+                      title="AI Vision"
+                      link="/service/service-details"
+                      src="/images/service_3.jpeg"
+                      alt="Service"
+                    />
+                  </a>
+                  <Spacing lg="0" md="30" />
+                </Div>
 
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
@@ -192,7 +192,7 @@ export default function Home({user}) {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-        Welcome to the unveiling of EYES on AI,computer vision, and voice recognition technologies to provide real-time assistance and object identification.
+          Welcome to the unveiling of EYES on AI,computer vision, and voice recognition technologies to provide real-time assistance and object identification.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal

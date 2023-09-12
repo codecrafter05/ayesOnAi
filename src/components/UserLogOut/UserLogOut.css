@@ -1,50 +1,77 @@
-.UserLogOut {
+.Btn {
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 150px; 
-  height: 90px;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: var(--night-rider);
+  transform: translateY(50%);
+  transition-duration: 0.3s;
 }
 
-.circle {
-  width: 40px; 
-  height: 40px;
-  background-color: #FF4A17;
-  color: white;
-  border-radius: 50%;
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px; 
-  cursor: pointer;
 }
 
-.logout-bar {
-  position: absolute; 
-  top: 50px; 
-  left: 0; 
-  display: none;
-  width: 100%;
+.sign svg {
+  width: 17px;
 }
 
-.circle:hover + .logout-bar, .logout-bar:hover {
-  display: block;
+.sign svg path {
+  fill: var(--af-white);
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--af-white);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: .3s;
+  transform: translateY(20px);
+
 }
 
-.btn-sm {
-  background-color: #FF4A17;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  margin-top: 5px;
-  cursor: pointer;
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
 }
-.cs-site_header .cs-main_header_center .cs-nav ul .circle {
-
-  margin-left: 8px;    
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
 }
-
-
-.btn-sm:hover {
-  background-color: #FF4A17;
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
 }

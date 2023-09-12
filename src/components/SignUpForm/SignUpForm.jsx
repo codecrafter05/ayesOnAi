@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
+import './SignUpForm.css';
 
 export default class SignUpForm extends Component {
   state = {
@@ -9,7 +10,7 @@ export default class SignUpForm extends Component {
     confirm: '',
     error: ''
   };
-
+  
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
@@ -36,77 +37,32 @@ export default class SignUpForm extends Component {
     const disable = this.state.password !== this.state.confirm;
     return (
       <div>
-        <style>
-          {`
-            .form-container {
-              background-color: #f4f4f4;
-              border: 1px solid #ddd;
-              padding: 40px;
-              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-              border-radius: 12px;
-              width: 350px;
-              text-align: center;
-              margin: 50px auto;
-            }
-
-            label {
-              display: block;
-              margin-bottom: 12px;
-              font-weight: bold;
-              font-size: 1.1em;
-              color: #333;
-            }
-
-            input {
-              width: 100%;
-              padding: 15px;
-              margin-bottom: 20px;
-              border: 1px solid #ccc;
-              border-radius: 6px;
-              font-size: 1em;
-            }
-
-            button {
-              width: 100%;
-              padding: 15px;
-              background-color: #007bff;
-              color: #fff;
-              border: none;
-              border-radius: 6px;
-              font-size: 1.1em;
-              cursor: pointer;
-              transition: background-color 0.3s;
-            }
-
-            button:hover {
-              background-color: #0056b3;
-            }
-
-            button:disabled {
-              background-color: #ccc;
-              cursor: not-allowed;
-            }
-
-            .error-message {
-              color: red;
-              font-weight: bold;
-            }
-          `}
-        </style>
+      
         <div className="form-container">
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
-            <label>Name</label>
-            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-            <label>Email</label>
-            <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
-            <label>Password</label>
-            <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-            <label>Confirm Password</label>
-            <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
-            <button type="submit" disabled={disable}>SIGN UP</button>
+          <form className="form" autoComplete="off" onSubmit={this.handleSubmit}>
+            <p id="heading">Sign Up</p>
+            <div className="field">
+              <label>Name</label>
+              <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required className="input-field" />
+            </div>
+            <div className="field">
+              <label>Email</label>
+              <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required className="input-field" />
+            </div>
+            <div className="field">
+              <label>Password</label>
+              <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required className="input-field" />
+            </div>
+            <div className="field">
+              <label>Confirm Password</label>
+              <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required className="input-field" />
+            </div>
+            <div className="btn">
+              <button className="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
           </form>
+          <p className="error-message">&nbsp;{this.state.error}</p>
         </div>
-        <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );
   }
