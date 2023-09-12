@@ -9,7 +9,7 @@ export default function UserLogOut({ user, setUser }) {
 
   return (
     <div className="UserLogOut">
-      <div className="circle" onClick={handleLogOut}>{user.name.charAt(0)}</div>
+      <div className="circle" onClick={handleLogOut}>{user.name}</div>
       <div className="logout-bar">
         <button className="btn-sm" onClick={handleLogOut}>Log Out</button>
       </div>

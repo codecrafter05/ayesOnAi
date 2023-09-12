@@ -261,17 +261,17 @@ export default function Header({ variant }) {
                         </Link>
                       </li>
                       <li>
-                       
-                                 <a href="http://localhost:3002/dashboard">Dashbord</a>
-                                  
 
-                        
-                         
-                        
+                        <a href="http://localhost:3002/dashboard">Dashbord</a>
+
+
+
+
+
                       </li>
                       <li>
-                       
-                          <UserLogOut user={user} setUser={setUser} /> 
+
+                        <UserLogOut user={user} setUser={setUser} />
                       </li>
                     </ul>
                     <span

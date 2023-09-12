@@ -10,20 +10,27 @@ module.exports = {
   deleteUser,
   getUserById,
   updateUserById,
+  getAllUsers,
 };
 
 
 
 async function create(req, res) {
+  console.log('create...')
+  console.log(req.body)
   try {
     // Add the user to the db
     const user = await User.create(req.body);
     // token will be a string
     const token = createJWT(user);
     // Yes, we can serialize a string
-    res.json(token);
+    console.log('returning token')
+    console.log(token)
+    res.status(200).json(token);
   } catch (err) {
     // Probably a dup email
+    console.log('error')
+    console.log(err)
     res.status(400).json(err);
   }
 }
@@ -110,4 +117,15 @@ function createJWT(user) {
     process.env.SECRET,
     { expiresIn: '24h' }
   );
+}
+
+// get all users from the DB
+
+async function getAllUsers(req, res) {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }

@@ -1,9 +1,10 @@
-// file AyesOnAi\backend\backend\src\components\users\tabset-user.js
+// file: AyesOnAi\backend\backend\src\components\users\tabset-user.js
 
 
 import React, { Fragment, useState } from "react";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import { Button, Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
+import * as nythingp from "../../utilities/users-api";
 
 const TabsetUser = () => {
   // State variables to store form input data
@@ -11,31 +12,37 @@ const TabsetUser = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState(""); // Added state for Confirm Password
+  const [passwordsMatch, setPasswordsMatch] = useState(true); // State to track password matching
 
   // Function to handle form submission
   const handleFormSubmit = async () => {
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      setPasswordsMatch(false);
+      return; // Stop form submission if passwords don't match
+    }
+
     try {
-      const response = await fetch("/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email,
-          password,
-        }),
+      const response = await nythingp.signUp({
+        firstName,
+        lastName,
+        email,
+        password,
       });
 
-      if (response.ok) {
-        // User created successfully, handle the JWT token here
-        const token = await response.json();
-        console.log("JWT token:", token);
-      } else {
-        // Handle errors here, e.g., show an error message to the user
-        console.error("Error creating user");
-      }
+      console.log('response', JSON.stringify(response));
+
+      const token = response;
+      console.log("JWT token:", token);
+
+      // Clear the input fields on successful save
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
+      setPasswordsMatch(true); // Reset password matching status
     } catch (error) {
       console.error("Error:", error);
     }
@@ -51,6 +58,9 @@ const TabsetUser = () => {
         <TabPanel>
           <Form className="needs-validation user-add" noValidate="">
             <h4>Account Details</h4>
+            {!passwordsMatch && (
+              <div className="text-danger">Passwords do not match.</div>
+            )}
             <FormGroup className="row">
               <Label className="col-xl-3 col-md-4">
                 <span>*</span> First Name
@@ -58,6 +68,7 @@ const TabsetUser = () => {
               <div className="col-xl-8 col-md-7">
                 <Input
                   className="form-control"
+                  name="firstName"
                   type="text"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
@@ -72,6 +83,7 @@ const TabsetUser = () => {
               <div className="col-xl-8 col-md-7">
                 <Input
                   className="form-control"
+                  name="lastName"
                   type="text"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
@@ -86,6 +98,7 @@ const TabsetUser = () => {
               <div className="col-xl-8 col-md-7">
                 <Input
                   className="form-control"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -100,6 +113,7 @@ const TabsetUser = () => {
               <div className="col-xl-8 col-md-7">
                 <Input
                   className="form-control"
+                  name="password"
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -114,9 +128,10 @@ const TabsetUser = () => {
               <div className="col-xl-8 col-md-7">
                 <Input
                   className="form-control"
+                  name="confirmPassword"
                   type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                 />
               </div>

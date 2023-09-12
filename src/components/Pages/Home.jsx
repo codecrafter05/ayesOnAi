@@ -17,7 +17,7 @@ import TimelineSlider from "../Slider/TimelineSlider";
 import { pageTitle } from "../../helper";
 import AuthPage from '../../components/Pages/AuthPage/AuthPage'; 
 
-export default function Home() {
+export default function Home({user}) {
   pageTitle("Home");
 
   // Hero Social Links
@@ -69,6 +69,7 @@ export default function Home() {
         heroSocialLinks={heroSocialLinks}
         bgImageUrl="/images/hero_bg.jpeg"
       />
+      
       {/* End Hero Section */}
 
       {/* Start FunFact Section */}
