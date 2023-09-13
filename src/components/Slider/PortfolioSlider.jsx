@@ -9,25 +9,25 @@ export default function PortfolioSlider() {
       title:'Colorful Art Work',
       subtitle:'See Details',
       href:'/portfolio/portfolio-details',
-      src:'/images/portfolio_1.jpeg'
+      src:'/images/ai.jpg'
     },
     {
       title:'Colorful Art Work',
       subtitle:'See Details',
       href:'/portfolio/portfolio-details',
-      src:'/images/portfolio_2.jpeg'
+      src:'/images/bi.jpg'
     },
     {
       title:'Colorful Art Work',
       subtitle:'See Details',
       href:'/portfolio/portfolio-details',
-      src:'/images/portfolio_0.jpg'
+      src:'/images/ci.jpg'
     },
     {
       title:'Colorful Art Work',
       subtitle:'See Details',
       href:'/portfolio/portfolio-details',
-      src:'/images/portfolio_3.jpeg'
+      src:'/images/di.jpg'
     }
   ]
   
