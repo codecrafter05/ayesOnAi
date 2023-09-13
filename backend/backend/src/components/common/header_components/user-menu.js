@@ -2,8 +2,16 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 //images import
 import man from "../../../assets/images/dashboard/man.png";
+import { logOut } from "../../../utilities/users-service";
 
-const UserMenu = () => {
+
+const UserMenu = ({setUser}) => {
+
+	function handleLogOut() {
+		logOut();
+		setUser(null);
+	}
+
 	return (
 		<Fragment>
 			<li className="onhover-dropdown">
@@ -40,9 +48,9 @@ const UserMenu = () => {
 						</a>
 					</li>
 					<li>
-						<Link to={`${process.env.PUBLIC_URL}/`}>
-							<i data-feather="log-out"></i>Logout
-						</Link>
+						
+							<button onClick={handleLogOut}> <i data-feather="log-out"></i>Logout</button>
+						
 					</li>
 				</ul>
 			</li>

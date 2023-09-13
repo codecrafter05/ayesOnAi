@@ -25,7 +25,7 @@ const App = (props) => {
 	return (
 		<div>
 			<div className="page-wrapper">
-				<Header />
+				<Header setUser={props.setUser}/>
 				<div className="page-body-wrapper">
 					<Sidebar />
 					<RightSidebar />

@@ -6,14 +6,47 @@ import stats from "../../assets/images/dashboard/stats.png";
 import "../../assets/scss/slick.scss";
 import "../../assets/scss/slick-theme.scss";
 import { Card, CardBody, Col, Container, Row } from "reactstrap";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import * as usersService from '../../utilities/users-service';
 
-const Login = () => {
+const Login = ({setUser}) => {
 	var settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
 		arrows: false,
 	};
+	const [credentials, setCredentials] = useState({
+		email: '',
+		password: ''
+	  });
+	  const [error, setError] = useState('');
+	  const [loading, setLoading] = useState(false); 
+	  const navigate = useNavigate();
+	
+	  function handleChange(evt) {
+		setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
+		setError('');
+	  }
+	
+	  async function handleSubmit(evt) {
+		evt.preventDefault();
+		setLoading(true); 
+	
+		try {
+		  const user = await usersService.login(credentials);
+		  setUser(user);
+		  navigate('/');
+		  window.location.reload();
+		} catch {
+		  setError('Log In');
+		} finally {
+		  setLoading(false); 
+		}
+	}
+
+
 	return (
 		<Fragment>
 			<div className="page-wrapper">
@@ -62,7 +95,7 @@ const Login = () => {
 							<Col className="col-md-7 p-0 card-right">
 								<Card className="tab2-card">
 									<CardBody>
-										<LoginTabset />
+										<LoginTabset setUser={setUser}/>
 									</CardBody>
 								</Card>
 							</Col>

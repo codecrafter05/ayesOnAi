@@ -14,7 +14,7 @@ import {
 //images
 import logo from "../../../assets/images/dashboard/multikart-logo.png";
 
-const Header = () => {
+const Header = ({setUser}) => {
   const [sidebar, setSidebar] = useState(true);
   const [rightSidebar, setRightSidebar] = useState(true);
   const [navMenus, setNavMenus] = useState(false);
@@ -130,7 +130,7 @@ const Header = () => {
                   <span className="dot"></span>
                 </a>
               </li>
-              <UserMenu />
+              <UserMenu setUser={setUser}/>
             </ul>
             <div
               className="d-lg-none mobile-toggle pull-right"
