@@ -1,3 +1,6 @@
+//file: AyesOnAi\backend\backend\src\components\common\datatable.js
+
+
 import React, { Fragment, useState } from "react";
 import DataTable from "react-data-table-component";
 import { ToastContainer, toast } from "react-toastify";
@@ -52,10 +55,12 @@ const Datatable = ({ myData, myClass, multiSelectOption, pagination }) => {
       />
     );
   };
-
+// the user Id isnt being cought 
   const handleDelete = async (index, userId) => {
+    
     if (window.confirm("Are you sure you wish to delete this item?")) {
       try {
+      
         const message = await deleteUser(userId); // You are calling deleteUser(userId) here
         console.log("message: " + message);
         toast.success(message);
@@ -64,6 +69,7 @@ const Datatable = ({ myData, myClass, multiSelectOption, pagination }) => {
         setData([...del]);
         console.log("delete done");
       } catch (error) {
+        console.log("this didnt delete")
         console.log(error);
         toast.error(error);
       }
@@ -119,7 +125,8 @@ const Datatable = ({ myData, myClass, multiSelectOption, pagination }) => {
       accessor: (str) => "delete",
       cell: (row, index) => (
         <div>
-          <span onClick={() => handleDelete(index, row.id)}>
+          <span onClick={() => handleDelete(index, row._id)}>
+            
             <i
               className="fa fa-trash"
               style={{
@@ -144,7 +151,7 @@ const Datatable = ({ myData, myClass, multiSelectOption, pagination }) => {
       accessor: (str) => "delete",
       cell: (row, index) => (
         <div>
-          <span onClick={() => handleDelete(index)}>
+          <span onClick={() => handleDelete(index,row._id)}>
             <i
               className="fa fa-trash"
               style={{

@@ -74,14 +74,14 @@ export async function deleteUser(userId) {
 
   try {
     const response = await sendRequest(
-      `${BASE_URL}/${userId}`,
+      `${BASE_URL}/${userId}/delete`,
       "DELETE"
     );
 
     if (response.success) {
       return response.message;
     } else {
-      throw new Error(response.message || "Failed to delete user.");
+      throw new Error(response.message || "Failed to delete user one.");
     }
   } catch (error) {
     console.error("Error deleting user:", error);
