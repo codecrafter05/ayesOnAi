@@ -61,11 +61,11 @@ Regarding whether the developers made any profits from the process, Al-Thawadi s
 Al-Thawadi pointed out that just as some people suffered losses, on the other hand, many traders achieved high profits, and this is the case in the stock market and electronic currencies. He expects that demands for the Enjaz currency will continue and increase when it is introduced again in the market because in the first hours its value equaled the value of ancient and international currencies. ..</p>
                 <Div className="row">
                   <Div className="col-md-6">
-                    <img src="/images/blog_details_img_1.jpeg" alt="Blog Details" className="cs-radius_15 w-100" />
+                    <img src="/images/di.jpg" alt="Blog Details" className="cs-radius_15 w-100" />
                     <Div className="cs-height_45 cs-height_lg_45" />
                   </Div>
                   <Div className="col-md-6">
-                    <img src="/images/blog_details_img_2.jpeg" alt="Blog Details" className="cs-radius_15 w-100" />
+                    <img src="/images/ci.jpg" alt="Blog Details" className="cs-radius_15 w-100" />
                     <Div className="cs-height_45 cs-height_lg_45" />
                   </Div>
                 </Div>
