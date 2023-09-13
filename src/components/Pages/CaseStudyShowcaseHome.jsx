@@ -1,8 +1,6 @@
 //CaseStudyShowcaseHome.jsx
 import React, { useEffect } from "react";
 import { pageTitle } from "../../helper";
-// import Hero7 from "../Hero/Hero7";
-// import Microphone from "../Hero/Microphone";
 import LiveLocation from "../Hero/LiveLocation";
 import Spacing from "../Spacing";
 
@@ -13,7 +11,6 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
   }, []);
 
   useEffect(() => {
-    // Make it speak here
     console.log("Attempting Speech");
     console.log(speechRender);
     if ("speechSynthesis" in window && speechRender != "") {
@@ -21,9 +18,31 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
       window.speechSynthesis.cancel();
       const synth = window.speechSynthesis;
 
+      // Get the list of voices
+      const voices = synth.getVoices();
+      console.log(voices);
+
+      // Find the female voice
+      let femaleVoice = voices.find(
+        (voice) => voice.name === "Google UK English Female"
+      );
+
+      // Mac Voice
+      if (!femaleVoice) {
+        femaleVoice = voices.find((voice) => voice.name === "Samantha");
+      }
+
+      // Create the SpeechSynthesisUtterance instance
       const utterance = new SpeechSynthesisUtterance(speechRender);
+
+      if (femaleVoice) {
+        // Use the female voice
+        utterance.voice = femaleVoice;
+      }
+
+      // Speak the utterance
       synth.speak(utterance);
-      console.log("Am I speaking:", synth.speaking); // will return true if utterance is currently being spoken
+      console.log("Am I speaking:", synth.speaking);
     } else {
       console.log("The Web Speech API is not supported by this browser.");
     }
