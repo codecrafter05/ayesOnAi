@@ -1,4 +1,4 @@
-# Eyes On AI: A Conversational Interface Revolution
+# Eyes On AI: A Conversational Interface Revolution - THE FUTURE IS NOW
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@
 - [Testing and Bug Fixing](#testing-and-bug-fixing)
 - [Coding Approach and Techniques](#coding-approach-and-techniques)
 - [Coding Standards and Contribution Guidelines](#coding-standards-and-contribution-guidelines)
+- [User Stories](#user-stories)
 - [Summary](#summary)
 - [Contact](#contact)
 
@@ -116,6 +117,52 @@ Jump to: [Table of Contents](#table-of-contents)
 Follow established coding styles and conventions. All contributions should come with corresponding unit tests and documentation.
 
 Jump to: [Table of Contents](#table-of-contents)
+
+## User Stories
+
+### As a first-time visitor:
+
+#### Understanding the Platform
+- **User Story:** As a first-time visitor, I want to easily understand what Eyes On AI is and what it does, so I know if it's the right service for me.
+
+#### Easy Setup
+- **User Story:** As a new user, I want straightforward setup instructions, so I can quickly start using the application without frustration.
+
+---
+
+### As a casual user:
+
+#### Quick Access
+- **User Story:** As a casual user, I want the application to load quickly, so I don't waste time waiting.
+
+#### Object Recognition
+- **User Story:** As a casual user, I want the app to correctly identify objects in my video feed, so I can interact with my environment more meaningfully through the app.
+
+#### Voice-to-Text Accuracy
+- **User Story:** As a casual user, I want the application to accurately transcribe my spoken language into text, so I can communicate effortlessly.
+
+---
+
+### As a power user:
+
+#### Advanced Interactions
+- **User Story:** As a power user, I want to be able to adjust settings like object recognition sensitivity and voice-to-text accuracy, so the application is better tailored to my needs.
+
+#### Data Management
+- **User Story:** As a power user, I want to be able to manage my data and history, so I have full control over what's stored and what's not.
+
+#### Multilingual Support
+- **User Story:** As a power user who speaks multiple languages, I want the application to support multiple languages in voice-to-text and text-to-voice functionalities, so I can interact in my preferred language.
+
+---
+
+### As a developer:
+
+#### Clear Documentation
+- **User Story:** As a developer, I want well-written documentation with code examples, so I can understand how to contribute to the project effectively.
+
+#### Testing Guidelines
+- **User Story:** As a developer, I want a well-defined testing framework and guidelines, so I can ensure my contributions won't break existing features.
 
 ## Summary
 
