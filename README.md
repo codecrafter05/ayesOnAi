@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+  ![Alt Text](images/wirefram.png)
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
