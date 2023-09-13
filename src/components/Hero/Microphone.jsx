@@ -1,5 +1,4 @@
 //AyesOnAI/client/src/components/Microphone.jsx
-//AyesOnAI/client/src/components/Microphone.jsx
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
@@ -31,8 +30,22 @@ function Microphone({
   const recognitionStarted = useRef(false);
   const finalTranscriptRef = useRef(""); // Store finalTranscript in a ref
 
-  const startRecording = () => {
-    if (!recognitionStarted.current) {
+  const toggleRecording = () => {
+    if (recognitionStarted.current) {
+      recognition.stop();
+      recognitionStarted.current = false;
+      setIsListening(false);
+      console.log("Listening stopped");
+
+      // Pass the last detected object, person count, and finalTranscript from the ref to handleObjectDetection
+      handleObjectDetection(
+        lastDetectedObject,
+        lastPersonCount,
+        finalTranscriptRef.current
+      );
+      // Clear the ref
+      finalTranscriptRef.current = "";
+    } else {
       recognition.start();
       recognitionStarted.current = true;
       setIsListening(true);
@@ -109,30 +122,18 @@ function Microphone({
       />
       <div>
         <button
-          onClick={startRecording}
+          onClick={toggleRecording}
           style={{
             margin: "10px",
-            padding: "10px",
-            backgroundColor: "green",
+            padding: "15px", // Changed from 10px to 15px
+            fontSize: "20px", // Added font size
+            backgroundColor: isListening ? "red" : "green",
             color: "white",
             border: "none",
             borderRadius: "5px",
           }}
         >
-          Start
-        </button>
-        <button
-          onClick={stopRecording}
-          style={{
-            margin: "10px",
-            padding: "10px",
-            backgroundColor: "red",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-          }}
-        >
-          Stop
+          {isListening ? "Stop" : "Start"}
         </button>
       </div>
       <p>{transcript}</p>

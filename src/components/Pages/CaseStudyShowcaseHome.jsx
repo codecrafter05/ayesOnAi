@@ -92,7 +92,6 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
         style={{
           display: "grid",
           gridTemplateRows: "auto auto auto", // or "repeat(3, auto)" to be more concise
-          minHeight: "100vh",
           width: "98%", // specify the width
           marginLeft: "auto", // center the element
           marginRight: "auto", // center the element
