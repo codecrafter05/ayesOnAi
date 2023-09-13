@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-  ![Alt Text](./images/wirefram.png)
+- [Alt Text](images/wirefram.png)
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -14,6 +14,8 @@
 - [User Stories](#user-stories)
 - [Summary](#summary)
 - [Contact](#contact)
+
+## Wirefram
 
 ## Project Overview
 
