@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { pageTitle } from "../../helper";
 import LiveLocation from "../Hero/LiveLocation";
-import Spacing from "../Spacing";
+// import Spacing from "../Spacing";
 
 export default function CaseStudyShowcaseHome({ speechRender }) {
   pageTitle("Case Study Showcase");

@@ -78,82 +78,93 @@ function App() {
       //   });
     }
   }, [isUpdated, objectInfo]);
-
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route
-            path="photography-agency"
-            element={<PhotographyAgencyHome />}
-          />
-          <Route path="digital-agency" element={<DigitalAgencyHome />} />
-          <Route path="marketing-agency" element={<MarketingAgencyHome />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="service" element={<ServicesPage />} />
-          <Route
-            path="service/:serviceDetailsId"
-            element={<ServiceDetailsPage />}
-          />
-          <Route path="portfolio" element={<PortfolioPage />} />
-          <Route
-            path="portfolio/:portfolioDetailsId"
-            element={<PortfolioDetailsPage />}
-          />
-          <Route path="blog" element={<BlogPage />} />
-          <Route path="blog/:blogDetailsId" element={<BlogDetailsPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="team" element={<TeamPage />} />
-          <Route path="team/:teamDetails" element={<TeamDetails />} />
-          <Route
-            path="/case-study/:caseStudyDetailsId"
-            element={<CaseStudyDetailsPage />}
-          />
-          <Route path="faq" element={<FaqPage />} />
-          <Route path="Auth" element={<AuthPage setUser={setUser} />} />
-        </Route>
-        <Route
-          path="/"
-          element={<Layout headerVariant="cs-site_header_full_width" />}
-        >
-          <Route
-            path="creative-portfolio"
-            element={<CreativePortfolioHome />}
-          />
-          <Route
-            path="showcase-portfolio"
-            element={<ShowcasePortfolioHome />}
-          />
-          <Route
-            path="case-study-showcase"
-            element={
-              <>
-                <Spacing lg="160" md="80" />
-                <Spacing lg="160" md="80" />
-                <div className="camera-container">
-                  <Hero7
-                    onObjectDetection={(objectName) =>
-                      handleObjectDetection(objectName, objectInfo.personNumber)
-                    }
-                    onPersonDetection={(personNumber) =>
-                      handleObjectDetection(objectInfo.name, personNumber)
-                    }
-                  />
-                </div>
-                <Microphone
-                  handleObjectDetection={handleObjectDetection}
-                  lastFaceDetectionResultRef={lastFaceDetectionResultRef}
-                  lastDetectedObject={objectInfo.name}
-                  lastPersonCount={objectInfo.personNumber}
-                />
-                <CaseStudyShowcaseHome speechRender={speechRender} />
-              </>
-            }
-          />
-        </Route>
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      {user ? (
+        <>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route
+                path="photography-agency"
+                element={<PhotographyAgencyHome />}
+              />
+              <Route path="digital-agency" element={<DigitalAgencyHome />} />
+              <Route
+                path="marketing-agency"
+                element={<MarketingAgencyHome />}
+              />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="service" element={<ServicesPage />} />
+              <Route
+                path="service/:serviceDetailsId"
+                element={<ServiceDetailsPage />}
+              />
+              <Route path="portfolio" element={<PortfolioPage />} />
+              <Route
+                path="portfolio/:portfolioDetailsId"
+                element={<PortfolioDetailsPage />}
+              />
+              <Route path="blog" element={<BlogPage />} />
+              <Route path="blog/:blogDetailsId" element={<BlogDetailsPage />} />
+              <Route path="contact" element={<ContactPage />} />
+              <Route path="team" element={<TeamPage />} />
+              <Route path="team/:teamDetails" element={<TeamDetails />} />
+              <Route
+                path="/case-study/:caseStudyDetailsId"
+                element={<CaseStudyDetailsPage />}
+              />
+              <Route path="faq" element={<FaqPage />} />
+              <Route path="Auth" element={<AuthPage setUser={setUser} />} />
+            </Route>
+            <Route
+              path="/"
+              element={<Layout headerVariant="cs-site_header_full_width" />}
+            >
+              <Route
+                path="creative-portfolio"
+                element={<CreativePortfolioHome />}
+              />
+              <Route
+                path="showcase-portfolio"
+                element={<ShowcasePortfolioHome />}
+              />
+              <Route
+                path="case-study-showcase"
+                element={
+                  <>
+                    <Spacing lg="160" md="80" />
+                    <Spacing lg="160" md="80" />
+                    <div className="camera-container">
+                      <Hero7
+                        onObjectDetection={(objectName) =>
+                          handleObjectDetection(
+                            objectName,
+                            objectInfo.personNumber
+                          )
+                        }
+                        onPersonDetection={(personNumber) =>
+                          handleObjectDetection(objectInfo.name, personNumber)
+                        }
+                      />
+                    </div>
+                    <Microphone
+                      handleObjectDetection={handleObjectDetection}
+                      lastFaceDetectionResultRef={lastFaceDetectionResultRef}
+                      lastDetectedObject={objectInfo.name}
+                      lastPersonCount={objectInfo.personNumber}
+                    />
+                    <CaseStudyShowcaseHome speechRender={speechRender} />
+                  </>
+                }
+              />
+            </Route>
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </>
+      ) : (
+        <AuthPage setUser={setUser} />
+      )}
     </>
   );
 }
