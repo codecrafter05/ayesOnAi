@@ -10,7 +10,7 @@ export default function TeamSlider() {
     {
       memberImage: '/images/member_1.jpeg',
       memberName: 'Rashid Althawadi',
-      memberDesignation: 'Co-Founder',
+      memberDesignation: 'Founder',
       memberSocial: {
         linkedin: '/',
         twitter: '/',
@@ -21,7 +21,7 @@ export default function TeamSlider() {
     {
       memberImage: '/images/member_2.jpeg',
       memberName: 'Yusuf Hakeem',
-      memberDesignation: 'Analyzer',
+      memberDesignation: 'Software Engineer',
       memberSocial: {
         linkedin: '/',
         twitter: '/',
@@ -45,7 +45,7 @@ export default function TeamSlider() {
     {
       memberImage: '/images/member_1.jpeg',
       memberName: 'Rashid Althawadi',
-      memberDesignation: 'Co-Founder',
+      memberDesignation: 'Founder',
       memberSocial: {
         linkedin: '/',
         twitter: '/',
