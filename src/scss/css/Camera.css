@@ -19,6 +19,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%; /* make the video and canvas also a circle */
+  object-fit: cover;
 }
 
 .camera-video {

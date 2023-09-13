@@ -1,6 +1,7 @@
 //AyesOnAI/client/src/components/Microphone.jsx
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
+import "../../scss/css/Microphone.css";
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -123,17 +124,10 @@ function Microphone({
       <div>
         <button
           onClick={toggleRecording}
-          style={{
-            margin: "10px",
-            padding: "15px", // Changed from 10px to 15px
-            fontSize: "20px", // Added font size
-            backgroundColor: isListening ? "red" : "green",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-          }}
+          className={isListening ? "btn btn-red" : "btn btn-green"}
         >
-          {isListening ? "Stop" : "Start"}
+          <span className="btn-text">{isListening ? "Stop" : "Start"}</span>
+          <span className="btn-text-hover">Great!</span>
         </button>
       </div>
       <p>{transcript}</p>

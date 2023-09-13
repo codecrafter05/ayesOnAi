@@ -28,6 +28,9 @@ import Hero7 from "./components/Hero/Hero7";
 import Microphone from "./components/Hero/Microphone";
 import { sendToBackend } from "./sendToBackend/api";
 import Spacing from "./components/Spacing";
+import LiveLocation from "./components/Hero/LiveLocation";
+import Qchat from "./components/Hero/Qchat";
+import Achat from "./components/Hero/Achat";
 
 function App() {
   const [objectInfo, setObjectInfo] = useState({ name: "", personNumber: "" });
@@ -83,7 +86,6 @@ function App() {
       {user ? (
         <>
           <Routes>
-            
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route
@@ -136,26 +138,79 @@ function App() {
                   <>
                     <Spacing lg="160" md="80" />
                     <Spacing lg="160" md="80" />
-                    <div className="camera-container">
-                      <Hero7
-                        onObjectDetection={(objectName) =>
-                          handleObjectDetection(
-                            objectName,
-                            objectInfo.personNumber
-                          )
-                        }
-                        onPersonDetection={(personNumber) =>
-                          handleObjectDetection(objectInfo.name, personNumber)
-                        }
-                      />
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "98%",
+                        height: "800px",
+                        border: "2px solid #000", // border
+                        boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)", // shadow
+                        background: "#3C3C3C",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          marginTop: "105px",
+                          width: "50%",
+                          height: "100%",
+                        }}
+                      >
+                        <Hero7
+                          onObjectDetection={(objectName) =>
+                            handleObjectDetection(
+                              objectName,
+                              objectInfo.personNumber
+                            )
+                          }
+                          onPersonDetection={(personNumber) =>
+                            handleObjectDetection(objectInfo.name, personNumber)
+                          }
+                        />
+                        <Microphone
+                          handleObjectDetection={handleObjectDetection}
+                          lastFaceDetectionResultRef={
+                            lastFaceDetectionResultRef
+                          }
+                          lastDetectedObject={objectInfo.name}
+                          lastPersonCount={objectInfo.personNumber}
+                        />
+
+                        <CaseStudyShowcaseHome speechRender={speechRender} />
+                      </div>
+                      <div // New div for Qchat and Achat
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          marginTop: "80px",
+                          width: "50%",
+                          height: "80%",
+                        }}
+                      >
+                        <Qchat />
+                        <Spacing lg="100" md="80" />
+                        <Achat />
+                      </div>
                     </div>
-                    <Microphone
-                      handleObjectDetection={handleObjectDetection}
-                      lastFaceDetectionResultRef={lastFaceDetectionResultRef}
-                      lastDetectedObject={objectInfo.name}
-                      lastPersonCount={objectInfo.personNumber}
-                    />
-                    <CaseStudyShowcaseHome speechRender={speechRender} />
+                    <Spacing lg="30" md="8" />
+
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        width: "98%",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        border: "2px solid #000", // border
+                        boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)", // shadow
+                      }}
+                    >
+                      <LiveLocation />
+                    </div>
                   </>
                 }
               />
