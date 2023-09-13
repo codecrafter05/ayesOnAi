@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [WireFram](public/images/wirefram.png)
+ [WireFram](public/images/wirefram.png)
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
