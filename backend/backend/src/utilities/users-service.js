@@ -36,6 +36,11 @@ export function getToken() {
 
 export function getUser() {
   const token = getToken();
+  console.log("getUser")
+
+  console.log(token)
+  console.log(token && token['user'])
+
   return token ?
     JSON.parse(atob(token.split('.')[1])).user
     :
@@ -49,6 +54,8 @@ export function logOut() {
 export async function login(credentials) {
   // Delegate the AJAX request to the users-api.js
   // module.
+  console.log("credentials")
+  console.log(credentials)
   const token = await usersAPI.login(credentials);
   localStorage.setItem('token', token);
   return getUser();

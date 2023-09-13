@@ -36,7 +36,7 @@ const LayoutRoutes = () => {
   return (
     <Fragment>
         <Routes>
-            <Route element={<App />}>
+            <Route element={<App/>}>
             <Route
 							path={`${process.env.PUBLIC_URL}/dashboard`}
 							element={<Dashboard />}
@@ -168,7 +168,7 @@ const LayoutRoutes = () => {
 							path={`${process.env.PUBLIC_URL}/data-table`}
 							element={<Datatable />}
 						/>
-                </Route>
+            </Route>
         </Routes>
     </Fragment>
     )

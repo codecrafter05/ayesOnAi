@@ -1,12 +1,15 @@
 import React, { Fragment } from "react";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import { User, Unlock } from "react-feather";
-import {  useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import * as usersService from '../../utilities/users-service';
 
-const LoginTabset = () => {
+
+const LoginTabset = ({setUser}) => {
 	const history = useNavigate();
-
+	
 	const clickActive = (event) => {
 		document.querySelector(".nav-link").classList.remove("show");
 		event.target.classList.add("show");
@@ -15,6 +18,36 @@ const LoginTabset = () => {
 	const routeChange = () => {
 		history(`${process.env.PUBLIC_URL}/dashboard`);
 	};
+
+	const [credentials, setCredentials] = useState({
+		email: '',
+		password: ''
+	  });
+	  const [error, setError] = useState('');
+	  const [loading, setLoading] = useState(false); 
+	  const navigate = useNavigate();
+	
+	  function handleChange(evt) {
+		setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
+		setError('');
+	  }
+	
+	  async function handleSubmit(evt) {
+		evt.preventDefault();
+		setLoading(true); 
+	
+		try {
+		  const user = await usersService.login(credentials);
+		  setUser(user);
+		  navigate('/');
+		  window.location.reload();
+		} catch {
+		  setError('Log In');
+		} finally {
+		  setLoading(false); 
+		}
+	}
+
 	return (
 		<div>
 			<Fragment>
@@ -31,24 +64,28 @@ const LoginTabset = () => {
 					</TabList>
 
 					<TabPanel>
-						<Form className="form-horizontal auth-form">
+						<Form className="form-horizontal auth-form" onSubmit={handleSubmit}>
 							<FormGroup>
 								<Input
 									required=""
-									name="login[username]"
+									name="email"
 									type="email"
+									value={credentials.email}
 									className="form-control"
 									placeholder="Username"
 									id="exampleInputEmail1"
+									onChange={handleChange}
 								/>
 							</FormGroup>
 							<FormGroup>
 								<Input
 									required=""
-									name="login[password]"
+									name="password"
 									type="password"
+									value={credentials.password}
 									className="form-control"
 									placeholder="Password"
+									onChange={handleChange}
 								/>
 							</FormGroup>
 							<div className="form-terms">
@@ -58,6 +95,7 @@ const LoginTabset = () => {
 											className="checkbox_animated"
 											id="chk-ani2"
 											type="checkbox"
+											onChange={handleChange}
 										/>
 										Reminder Me{" "}
 										<span className="pull-right">
