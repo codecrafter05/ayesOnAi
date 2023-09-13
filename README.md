@@ -20,7 +20,7 @@ Eyes On AI is a web application that harnesses the power of machine learning and
 
 Jump to: [Table of Contents](#table-of-contents)
 
-## Features
+## Features.
 
 - **Object Recognition**: Real-time identification of objects in video streams.
 - **Voice-to-Text**: Transcription of spoken language into readable text.
