@@ -21,16 +21,16 @@ export default function BlogPage() {
       href:'/blog/blog-details'
     },
     {
-      thumb:'/images/post_5.jpeg',
+      thumb:'/images/ai.jpg',
       title:'Creative studio For AI Detection',
-      subtitle:'The term "Creative Studio for AI Detection" could refer to a variety of concepts depending on the context in which it',
+      subtitle:'The term "Injaz" developer to "Al-Watan": Out of "trust" we have committed ourselves to compensate the losers if we make a mistake" could refer to a variety of concepts depending on the context in which it',
       date:'11 Sep 2023',
       category:'AI Detection',
       categoryHref:'/blog',
       href:'/blog/blog-details'
     },
     {
-      thumb:'/images/post_6.jpeg',
+      thumb:'/images/bi.jpg',
       title:'Artistic mind will be great for creation',
       subtitle:'Absolutely, an artistic mind brings a unique perspective to any creation, be it traditional art, design, or even technological innovations like AI. The blend of art and technology, often referred to as "ArtTech," is a growing field where artistic creativity meets computational power.',
       date:'12 Sep 2023',

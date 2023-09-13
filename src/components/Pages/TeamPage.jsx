@@ -56,7 +56,7 @@ export default function TeamPage() {
     },
     {
       memberImage: '/images/member_3.jpeg',
-      memberName: 'David Elone',
+      memberName: 'Mustafa Qarooni',
       memberDesignation: 'React Developer',
       memberSocial: {
         linkedin: '/',
@@ -78,7 +78,7 @@ export default function TeamPage() {
     },
     {
       memberImage: '/images/speed3.jpej',
-      memberName: 'Melon Bulgery',
+      memberName: 'Rashid Althawadi',
       memberDesignation: 'Product Designer',
       memberSocial: {
         linkedin: '/',
@@ -89,7 +89,7 @@ export default function TeamPage() {
     },
     {
       memberImage: '/images/member_2.jpeg',
-      memberName: 'Olinaz Fushi',
+      memberName: 'Yusuf Hakeem',
       memberDesignation: 'Product Designer',
       memberSocial: {
         linkedin: '/',

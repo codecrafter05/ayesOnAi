@@ -29,7 +29,7 @@ export default function Sidebar() {
       url:'/'
     },
     {
-      title: 'Design',
+      title: 'Crypto Curency',
       url:'/'
     },
     {
@@ -44,23 +44,23 @@ export default function Sidebar() {
   ]
   const categoryData = [
     {
-      title: 'Corporate',
+      title: 'AI Vision',
       url:'/'
     },
     {
-      title: 'Company',
+      title: 'AI Monitoring',
       url:'/'
     },
     {
-      title: 'Search Engine',
+      title: 'Voice Assistance',
       url:'/'
     },
     {
-      title: 'Information',
+      title: 'Crypto Curency',
       url:'/'
     },
     {
-      title: 'Painting',
+      title: 'Items Detection',
       url:'/'
     }
   ]
@@ -94,9 +94,9 @@ export default function Sidebar() {
     <>
       <Div className="cs-sidebar_item">
         <AuthorWidget 
-          src='/images/avatar_1.png'
-          name='Kuber Jontra' 
-          description='At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.'
+          src='/images/member_1.jpeg'
+          name='Rashid Althawadi' 
+          description='Rashid Althawadi The owner of Iijaz Token Bahrain which is started on 26/11/2021'
         />
       </Div>
       <Div className="cs-sidebar_item">
