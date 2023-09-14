@@ -329,8 +329,8 @@ export default function DigitalAgencyHome() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title=""
+          btnText="To the Details section"
           btnLink="/Portfolio"
           bgSrc="/images/cta_bg.jpeg"
         />
