@@ -1,7 +1,7 @@
 import React from "react";
 import "../../scss/css/Qchat.css";
 
-const Qchat = () => {
+const Achat = ({ transcript }) => {
   return (
     <>
       <div className="card">
@@ -27,37 +27,7 @@ const Qchat = () => {
         <div className="cppcode">
           <pre id="pre">
             <code>
-              <span className="s1">#include</span>{" "}
-              <span className="s2">&lt;iostream&gt;</span>
-              using<span className="s3"> namespace </span>std
-              <span className="sc">;</span>
-              <span className="s3">int</span> <span className="s2">main()</span>{" "}
-              <span className="curlies">&#123;</span>
-              <span className="s3">int</span> <span className="s4">a</span>{" "}
-              <span className="operator">=</span> 12
-              <span className="sc">;</span>
-              <span className="s3">int</span> <span className="s4">b</span>{" "}
-              <span className="operator">=</span> 5<span className="sc">;</span>
-              <span className="s4">cout</span>{" "}
-              <span className="s5">&lt;&lt;</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-              <span className="s1">"Sum of the numbers is: "</span>{" "}
-
-              <span className="s5">&lt;&lt;</span>{" "}
-              <span className="rounds">(</span>
-              <span className="s4">a </span>
-              <span className="operator">+</span>
-              <span className="s4"> b</span>
-              <span className="rounds">)</span>
-              <span className="sc">;</span>
-              <span className="s6">return</span> 0<span className="sc">;</span>
-              <span className="curlies">&#125;</span>
+              <span className="s1">{transcript}</span>{" "}
             </code>
           </pre>
         </div>
@@ -66,4 +36,4 @@ const Qchat = () => {
   );
 };
 
-export default Qchat;
+export default Achat;

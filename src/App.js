@@ -137,13 +137,12 @@ function App() {
                 path="case-study-showcase"
                 element={
                   <>
-                   
                     <PageHeading
                       title="MI AI"
                       bgSrc="images/team_hero_bg.jpeg"
                       pageLinkText="MI AI"
                     />
-                                       <Spacing lg="30" md="8" />
+                    <Spacing lg="30" md="8" />
 
                     <div
                       style={{
@@ -200,7 +199,7 @@ function App() {
                       >
                         <Qchat />
                         <Spacing lg="100" md="80" />
-                        <Achat />
+                        <Achat transcript={speechRender} />
                       </div>
                     </div>
                     <Spacing lg="30" md="8" />

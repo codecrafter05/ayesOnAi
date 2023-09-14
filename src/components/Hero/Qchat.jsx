@@ -1,25 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../scss/css/Qchat.css";
-import { sendToBackend } from "../../sendToBackend/api";
 
 const Qchat = () => {
-  const [logData, setLogData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const objectName = "Sample Object"; // replace with actual value
-      const personNumber = 1; // replace with actual value
-      const transcript = "Sample transcript"; // replace with actual value
-      try {
-        await sendToBackend(objectName, personNumber, transcript, setLogData);
-      } catch (error) {
-        console.error("Error in fetching:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <>
       <div className="card">
@@ -45,9 +27,7 @@ const Qchat = () => {
         <div className="cppcode">
           <pre id="pre">
             <code>
-              <span className="s1">
-                {logData ? `#include ${JSON.stringify(logData)}` : "#include"}
-              </span>{" "}
+              <span className="s1">Your question</span>{" "}
             </code>
           </pre>
         </div>
