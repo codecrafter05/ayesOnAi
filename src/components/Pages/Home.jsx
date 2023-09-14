@@ -196,7 +196,7 @@ export default function Home({ user }) {
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=n-u5FNchaBs"
+          videoSrc="https://www.youtube.com/watch?v=BcUtZVnQABw"
           bgUrl="/images/video_bg.jpeg"
         />
       </Div>
