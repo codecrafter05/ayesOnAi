@@ -5,17 +5,17 @@ import Hero from "../Hero";
 import Div from "../Div";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
-import Cta from "../Cta";
+// import Cta from "../Cta";
 import LogoList from "../LogoList";
 import MovingText from "../MovingText";
 import PortfolioSlider from "../Slider/PortfolioSlider";
 import PostSlider from "../Slider/PostSlider";
-import TestimonialSlider from "../Slider/TestimonialSlider";
+// import TestimonialSlider from "../Slider/TestimonialSlider";
 import TeamSlider from "../Slider/TeamSlider";
 import VideoModal from "../VideoModal";
 import TimelineSlider from "../Slider/TimelineSlider";
 import { pageTitle } from "../../helper";
-import AuthPage from '../../components/Pages/AuthPage/AuthPage';
+// import AuthPage from "../../components/Pages/AuthPage/AuthPage";
 
 export default function Home({ user }) {
   pageTitle("Home");
@@ -60,7 +60,7 @@ export default function Home({ user }) {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="EYES ON AI<br/> THE FUTURE IS NOW"
+        title="EYES ON AI<br/> <h3>YOUR GATEWAY TO THE FUTURE</h3>"
         subtitle="The project is designed for blind individuals and combines paLM, computer vision, and voice recognition to provide a voice-activated tool for real-time object identification and assistance."
         btnText="LogIn"
         btnLink="/Auth"
@@ -192,7 +192,11 @@ export default function Home({ user }) {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Welcome to the unveiling of EYES on AI,computer vision, and voice recognition Technologies to provide real-time assistance and object Identification.
+          <h4>
+            Welcome to the unveiling of EYES on AI,computer vision, and voice
+            recognition Technologies to provide real-time assistance and object
+            Identification.
+          </h4>
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal

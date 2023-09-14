@@ -29,26 +29,23 @@ export default function PricingTableList() {
         ],
       },
       {
-        title: "Professional",
-        price: "Coming soon",
+        title: "Professional-Soon",
+        price: "$",
         currency: "",
         features: [
           "Advanced AI Vision",
           "Enhanced Voice Assistance",
-          "Proactive AI Monitoring",
-          "Product Detector",
           "Priority Customer Support",
+          "VIP Customer Support",
         ],
       },
       {
-        title: "Ultimate",
-        price: "Coming soon",
+        title: "Ultimate-Soon",
+        price: "$",
         currency: "",
         features: [
           "Premium AI Vision",
           "Intelligent Voice Assistance",
-          "Adaptive AI Monitoring",
-          "Advanced Product Detector",
           "VIP Customer Support",
           "Data Privacy Assurance",
         ],
@@ -67,26 +64,23 @@ export default function PricingTableList() {
         ],
       },
       {
-        title: "Professional",
-        price: "Coming soon",
+        title: "Professional-Soon",
+        price: "$",
         currency: "",
         features: [
           "Advanced AI Vision",
           "Enhanced Voice Assistance",
           "Proactive AI Monitoring",
           "Product Detector",
-          "Priority Customer Support",
         ],
       },
       {
-        title: "Ultimate",
-        price: "Coming soon",
+        title: "Ultimate-Soon",
+        price: "$",
         currency: "",
         features: [
           "Premium AI Vision",
           "Intelligent Voice Assistance",
-          "Adaptive AI Monitoring",
-          "Advanced Product Detector",
           "VIP Customer Support",
           "Data Privacy Assurance",
         ],
@@ -124,7 +118,7 @@ export default function PricingTableList() {
             {item.title === "Standard" ? (
               <PayPalButton price={item.price} onSuccess={handleSuccess} />
             ) : (
-              <div>Coming soon</div>
+              <div></div>
             )}
             <Spacing lg="25" md="25" />
           </Section>
