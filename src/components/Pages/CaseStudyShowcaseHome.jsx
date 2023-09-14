@@ -11,8 +11,8 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
   }, []);
 
   useEffect(() => {
-    console.log("Attempting Speech");
-    console.log(speechRender);
+    // console.log("Attempting Speech");
+    // console.log(speechRender);
     if ("speechSynthesis" in window && speechRender != "") {
       console.log("About to speak");
       window.speechSynthesis.cancel();
@@ -96,9 +96,7 @@ export default function CaseStudyShowcaseHome({ speechRender }) {
           marginLeft: "auto", // center the element
           marginRight: "auto", // center the element
         }}
-      >
-        <LiveLocation />
-      </div>
+      ></div>
     </>
   );
 }
