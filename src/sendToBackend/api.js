@@ -7,7 +7,6 @@ export const sendToBackend = async (objectName, personNumber, transcript) => {
       personNumber,
       transcript,
     };
-    
 
     console.log("Sending data to backend:", data);
 
