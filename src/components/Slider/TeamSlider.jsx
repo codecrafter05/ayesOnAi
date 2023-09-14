@@ -8,9 +8,9 @@ export default function TeamSlider() {
   /** Team Member Data **/
   const teamData = [
     {
-      memberImage: '/images/member_1.jpeg',
-      memberName: 'Rashid Althawadi',
-      memberDesignation: 'Founder',
+      memberImage: '/images/palm-ai2.jpg',
+      memberName: 'PalMAI',
+      memberDesignation: 'Google Developer',
       memberSocial: {
         linkedin: '/',
         twitter: '/',
