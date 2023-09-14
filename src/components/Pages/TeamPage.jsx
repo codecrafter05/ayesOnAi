@@ -44,7 +44,7 @@ export default function TeamPage() {
       },
     },
     {
-      memberImage: '/images/member_4.jpeg',
+      memberImage: '/images/palm-ai2.jpg',
       memberName: 'Rashid Althawadi',
       memberDesignation: 'WP Developer',
       memberSocial: {
