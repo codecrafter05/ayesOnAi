@@ -8,13 +8,13 @@ export default function TimelineSlider() {
   const timelineData = [
     [
       {
-        year: '2019',
-        name: 'Google awards',
-        position: 'Website of the day',
-        type: 'Mobile exelence',
+        year: '2030 in 2023',
+        name: 'AI Vision',
+        position: 'Vision of The Future',
+        type: 'AI Vision',
       },
       {
-        year: '2021',
+        year: '2023',
         name: 'CSS awards design',
         position: 'Honorable mention',
         type: 'Desktop exelence',
@@ -22,30 +22,30 @@ export default function TimelineSlider() {
     ],
     [
       {
-        year: '2020',
-        name: 'New technology innovation',
-        position: 'Honorable mention',
-        type: 'Desktop exelence',
+        year: '2030 presented',
+        name: 'AI Monitoring',
+        position: 'Motion',
+        type: 'AI Monitoring',
       },
       {
-        year: '2022',
-        name: 'UI/UX design of the month',
-        position: 'Website of the day',
-        type: 'Mobile exelence',
+        year: '2023',
+        name: 'Voice Assistance',
+        position: 'AI Voice',
+        type: 'Smart Voice',
       },
     ],
     [
       {
-        year: '2019',
-        name: 'Google awards',
-        position: 'Website of the day',
-        type: 'Mobile exelence',
+        year: '2030 in 2023',
+        name: 'AI Vision',
+        position: 'Vision of The Future',
+        type: 'AI Vision',
       },
       {
-        year: '2021',
-        name: 'CSS awards design',
-        position: 'Honorable mention',
-        type: 'Desktop exelence',
+        year: '2023',
+        name: 'Crypto Monitoring',
+        position: 'Up To Date',
+        type: 'Track Your Crypto',
       },
     ],
   ];
