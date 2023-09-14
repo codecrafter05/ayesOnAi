@@ -31,6 +31,7 @@ import Spacing from "./components/Spacing";
 import LiveLocation from "./components/Hero/LiveLocation";
 import Qchat from "./components/Hero/Qchat";
 import Achat from "./components/Hero/Achat";
+import PageHeading from "./components/PageHeading";
 
 function App() {
   const [objectInfo, setObjectInfo] = useState({ name: "", personNumber: "" });
@@ -136,8 +137,14 @@ function App() {
                 path="case-study-showcase"
                 element={
                   <>
-                    <Spacing lg="160" md="80" />
-                    <Spacing lg="160" md="80" />
+                   
+                    <PageHeading
+                      title="MI AI"
+                      bgSrc="images/team_hero_bg.jpeg"
+                      pageLinkText="MI AI"
+                    />
+                                       <Spacing lg="30" md="8" />
+
                     <div
                       style={{
                         display: "flex",
@@ -146,7 +153,7 @@ function App() {
                         height: "800px",
                         border: "2px solid #000", // border
                         boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)", // shadow
-                        background: "#3C3C3C",
+                        // background: "#3C3C3C",
                         marginLeft: "auto",
                         marginRight: "auto",
                       }}

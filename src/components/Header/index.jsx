@@ -178,9 +178,9 @@ export default function Header({ variant }) {
                           My AI
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="http://localhost:3002/dashboard">Dashbord</a>
-                      </li>
+                      </li> */}
                       <li>
                         <UserLogOut user={user} setUser={setUser} />
                       </li>

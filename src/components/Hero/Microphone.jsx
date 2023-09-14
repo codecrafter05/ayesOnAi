@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import "../../scss/css/Microphone.css";
+import { Icon } from "@iconify/react";
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -121,17 +122,34 @@ function Microphone({
           margin: "10px",
         }}
       />
-      <div>
+      <div
+        className="col-lg-12"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: "20px",
+        }}
+      >
         <button
+          className="cs-btn cs-style1"
           onClick={toggleRecording}
-          className={isListening ? "btn btn-red" : "btn btn-green"}
+          style={{
+            fontSize: "20px",
+            padding: "20px 40px",
+            borderRadius: "5px",
+          }}
         >
-          <span className="btn-text">{isListening ? "Stop" : "Start"}</span>
-          <span className="btn-text-hover">Great!</span>
+          <span>{isListening ? "Stop" : "Start"}</span>
+          <Icon
+            icon="bi:arrow-right"
+            style={{
+              fontSize: "22px",
+              marginLeft: "10px",
+            }}
+          />
         </button>
       </div>
-      <p>{transcript}</p>
-      {error && <p>{error}</p>}
+      {error && <p style={{ fontSize: "18px", color: "red" }}>{error}</p>}
     </div>
   );
 }
