@@ -9,7 +9,6 @@ export default function TeamSlider() {
   const teamData = [
     {
       memberImage: '/images/palm-ai2.jpg',
-      memberName: 'PalMAI',
       memberDesignation: 'Google Developer',
       memberSocial: {
         linkedin: '/',
@@ -31,7 +30,7 @@ export default function TeamSlider() {
     },
     {
       memberImage: '/images/member_3.jpeg',
-      memberName: 'Mustafa Qarooni',
+      memberName: 'Sayed Mustafa ',
       memberDesignation: 'Full Stack Developer',
       memberSocial: {
         linkedin: '/',
@@ -44,7 +43,7 @@ export default function TeamSlider() {
     },
     {
       memberImage: '/images/member_1.jpeg',
-      memberName: 'Rashid Althawadi',
+      memberName: 'Rashid Ahmed',
       memberDesignation: 'Founder',
       memberSocial: {
         linkedin: '/',
