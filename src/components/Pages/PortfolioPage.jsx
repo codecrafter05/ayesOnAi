@@ -123,7 +123,7 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHeading
-        title="Portfolio"
+        title="User One"
         bgSrc="images/portfolio_hero_bg.jpeg"
         pageLinkText="Portfolio"
       />
@@ -300,7 +300,7 @@ export default function PortfolioPage() {
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Jender*</label>
+                <label className="cs-primary_color">Address*</label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
@@ -326,7 +326,7 @@ export default function PortfolioPage() {
       </Div>
       <Spacing lg="150" md="80" />
       <Cta
-        title="agency@arino.com"
+        title="info@iinjaz-token.com"
         bgSrc="/images/cta_bg_2.jpeg"
         variant="rounded-0"
       />
