@@ -270,8 +270,8 @@ export default function DigitalAgencyHome() {
         <Div className="row">
           <Div className="col-xl-4">
             <SectionHeading
-              title="We get multiple awards"
-              subtitle="Our Awards"
+              title="Our Services"
+              subtitle="Our Services"
               variant="cs-style1"
             />
             <Spacing lg="90" md="45" />
